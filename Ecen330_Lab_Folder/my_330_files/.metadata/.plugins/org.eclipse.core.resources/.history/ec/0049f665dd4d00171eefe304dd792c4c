@@ -1,0 +1,344 @@
+/*
+ * simonControl.c
+ *
+ *  Created on: Jun 8, 2017
+ *      Author: clintrf
+ */
+
+
+#include "verifySequence_runTest.h"
+#include "flashSequence.h"
+#include "buttonHandler.h"
+#include "simonDisplay.h"
+#include "simonControl.h"
+#include "supportFiles/display.h"
+#include "supportFiles/utils.h"
+#include "globals.h"
+#include <stdio.h>
+#include <stdint.h>
+#include "../Lab2_switch_button/buttons.h"
+
+
+
+#define START_MSG "TOUCH TO START"
+#define SIMON_MSG "SIMON"
+#define YAY_MSG "Yay!"
+#define NEW_L_MSG "Touch for new level"
+#define LONG_MSG "Longest Sequence: "
+
+#define START_MSG_X 70
+#define START_MSG_Y 140
+
+#define SIMON_MSG_X 80
+#define SIMON_MSG_Y 90
+
+#define YAY_MSG_X 120
+#define YAY_MSG_Y 100
+
+#define NEW_L_MSG_X 50
+#define NEW_L_MSG_Y YAY_MSG_Y
+
+#define LONG_MSG_X 50
+#define LONG_MSG_Y YAY_MSG_Y
+
+#define NUM_MSG_X 280
+#define NUM_MSG_Y YAY_MSG_Y
+
+#define FALSE 0
+#define TRUE 1
+
+#define TEXT_SIZE_L 5
+#define TEXT_SIZE_S 2
+#define WAIT_TIME 40
+#define INIT_LEVEL 4
+
+
+uint8_t myArray[GLOBALS_MAX_FLASH_SEQUENCE];
+uint8_t currLevel = INIT_LEVEL;
+uint8_t currIter = 1;
+uint8_t randNum = 0;                                //Number that seeds the random number
+uint8_t yayCounter = 0;
+uint8_t newLevelCounter = 0;
+uint8_t longestSeqCounter = 0;
+
+uint8_t fdcounter = 0;
+uint8_t vdcounter = 0;
+
+
+
+
+//**********FLAGS**********/
+uint8_t initFlag = 0;
+uint8_t nextFlag = 0;
+uint8_t simonFlag = 0;
+
+
+
+
+enum control_st_m{
+    control_init_st,                    //the initializing state
+    control_touch_st,          //state waiting for a touch
+    control_begin_st,
+    control_flash_enable_st,                   //state for the flash sequence
+    control_flash_disable_st,
+    control_verify_enable,
+    control_verify_disable,
+    control_yay_st,
+    control_new_level_st,
+    control_longest_sq_st
+}controlCurrent = control_init_st;      //state that holds the current state
+
+
+
+
+
+
+
+void simonDebugStatePrint() {
+  static control_st_m previousState;
+  static bool firstPass = true;
+  // Only print the message if:
+  // 1. This the first pass and the value for previousState is unknown.
+  // 2. previousState != currentState - this prevents reprinting the same state name over and over.
+  if (previousState != controlCurrent || firstPass) {
+    firstPass = false;                // previousState will be defined, firstPass is false.
+    previousState = controlCurrent;     // keep track of the last state that you were in.
+    //printf("msCounter:%d\n\r", msCounter);
+    switch(controlCurrent) {            // This prints messages based upon the state that you were in.
+        case control_init_st:
+            printf("control_init_st\n\r");
+            break;
+        case control_touch_st:
+            printf("control_touch_st\n\r");
+            break;
+        case control_flash_enable_st:
+            printf("control_flash_enable_st\n\r");
+            break;
+        case control_flash_disable_st:
+            printf("control_flash_disable_st\n\r");
+            break;
+        case control_verify_enable:
+            printf("control_verify_enable\n\r");
+            break;
+        case control_verify_disable:
+            printf("control_verify_disable\n\r");
+            break;
+        case control_yay_st:
+            printf("control_yay_st\n\r");
+            break;
+        case control_new_level_st:
+            printf("control_new_level_st\n\r");
+            break;
+        case control_longest_sq_st:
+            printf("control_longest_sq_st\n\r");
+            break;
+     }
+  }
+}
+
+
+
+
+
+
+
+
+void randNumGen(){
+    srand(randNum);
+    for(uint8_t i = 0; i < currLevel; i++){
+        myArray[i] = rand() % (INIT_LEVEL);
+    }
+}
+
+void simonControl_tick(){
+    switch(controlCurrent){
+    case control_init_st:                  //state number 1 for moore
+        if(!initFlag && !simonFlag){
+            display_setCursor(START_MSG_X, START_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(START_MSG);
+            display_setCursor(SIMON_MSG_X, SIMON_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(SIMON_MSG);
+            if(!initFlag){
+                initFlag = TRUE;
+            }
+            if(!simonFlag){
+                simonFlag = TRUE;
+            }
+                                  //turn on the init Flag saying that the screen is initialized
+        }
+        randNum++;
+        break;
+    case control_touch_st:        //state number 2 for moore
+        break;
+    case control_begin_st:
+        globals_setSequenceIterationLength(currIter);
+        break;
+    case control_flash_enable_st:          //state number 4 for moore
+        fdcounter++;
+        flashSequence_enable();
+        break;
+    case control_flash_disable_st:
+        fdcounter = FALSE;
+        flashSequence_disable();
+        break;
+    case control_verify_enable:            //state number 7 for moore
+        vdcounter++;
+        verifySequence_enable();
+        break;
+    case control_verify_disable:           //state number 9 for moore
+        vdcounter = FALSE;
+        verifySequence_disable();
+        break;
+    case control_yay_st:
+        yayCounter++;
+        break;
+    case control_new_level_st:
+        newLevelCounter++;
+        break;
+    case control_longest_sq_st:
+        longestSeqCounter++;
+        break;
+    }
+    switch(controlCurrent){
+    case control_init_st:                  //state number 1 for mealy
+        if(nextFlag){
+            randNumGen();
+            globals_setSequence(myArray,currLevel);
+
+            //globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_begin_st;
+        }
+        else if(display_isTouched()){
+            randNumGen();
+            globals_setSequence(myArray,currLevel);
+            controlCurrent = control_touch_st;
+        }
+        break;
+    case control_touch_st:        //state number 2 for mealy
+        if(!display_isTouched()){
+            display_setCursor(START_MSG_X, START_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(START_MSG);
+            display_setCursor(SIMON_MSG_X, SIMON_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(SIMON_MSG);
+            //globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_begin_st;
+        }
+        break;
+    case control_begin_st:
+        controlCurrent = control_flash_enable_st;
+        break;
+    case control_flash_enable_st:          //state number 4 for mealy
+        if(flashSequence_isComplete()&& (fdcounter > 1)){
+            controlCurrent = control_flash_disable_st;
+        }
+        break;
+    case control_flash_disable_st:
+        controlCurrent = control_verify_enable;
+        break;
+    case control_verify_enable:            //state number 7 for mealy
+        if(verifySequence_isComplete() && (vdcounter > 1)){
+            controlCurrent = control_verify_disable;
+        }
+        break;
+    case control_verify_disable:           //state number 9 for mealy
+        if(currIter == currLevel){
+            display_setCursor(YAY_MSG_X, YAY_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(YAY_MSG);
+            controlCurrent = control_yay_st;
+        }
+        else if(verifySequence_isTimeOutError()|| verifySequence_isUserInputError()){
+            display_setCursor(LONG_MSG_X, LONG_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X, NUM_MSG_Y);
+            display_println(currLevel);
+            controlCurrent = control_longest_sq_st;
+        }
+        else{
+            currIter++;
+            //globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_begin_st;
+        }
+        break;
+    case control_yay_st:
+        if(yayCounter == WAIT_TIME){
+            //black yay
+            display_setCursor(YAY_MSG_X, YAY_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(YAY_MSG);
+            //print new level
+            display_setCursor(NEW_L_MSG_X, NEW_L_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            controlCurrent = control_new_level_st;
+        }
+        break;
+    case control_new_level_st:
+        if(newLevelCounter == WAIT_TIME){
+            //black new level
+            display_setCursor(NEW_L_MSG_X, NEW_L_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            //print longSQ
+            display_setCursor(LONG_MSG_X, LONG_MSG_Y);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X, NUM_MSG_Y);
+            display_println(currLevel);
+            controlCurrent = control_longest_sq_st;
+        }
+        if(display_isTouched()){
+            //black new level
+            display_setCursor(NEW_L_MSG_X, NEW_L_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            //Initialize var
+            currLevel++;
+            currIter = TRUE;
+            nextFlag = TRUE;
+            yayCounter = FALSE;
+            newLevelCounter = FALSE;
+            longestSeqCounter = FALSE;
+            controlCurrent = control_init_st;
+        }
+        break;
+    case control_longest_sq_st:
+        if(longestSeqCounter == WAIT_TIME){
+            //black longSQ
+            display_setCursor(LONG_MSG_X, LONG_MSG_Y);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X, NUM_MSG_Y);
+            display_println(currLevel);
+            //Initialize var
+            currLevel = INIT_LEVEL;
+            currIter = TRUE;
+            simonFlag = FALSE;
+            initFlag = FALSE;
+            nextFlag = FALSE;
+            yayCounter = FALSE;
+            newLevelCounter = FALSE;
+            longestSeqCounter = FALSE;
+            controlCurrent = control_init_st;
+        }
+        break;
+    }
+}
+

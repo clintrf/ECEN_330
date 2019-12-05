@@ -1,0 +1,14 @@
+/*
+ /*
+ * simonControl.h
+ *
+ *  Created on: Nov 14, 2015
+ *      Author: dwdegraw
+ */
+
+#ifndef SIMONCONTROL_H_
+#define SIMONCONTROL_H_
+
+void simonControl_tick();
+
+#endif /* SIMONCONTROL_H_ */

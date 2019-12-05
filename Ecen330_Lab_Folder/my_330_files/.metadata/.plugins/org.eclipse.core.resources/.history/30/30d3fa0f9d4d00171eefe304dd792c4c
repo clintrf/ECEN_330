@@ -1,0 +1,181 @@
+/*
+ * buttonHandler.c
+ *
+ *  Created on: Jun 1, 2017
+ *      Author: clintrf
+ */
+#include "buttonHandler.h"
+#include "simonDisplay.h"
+#include "supportFiles/display.h"
+#include "supportFiles/utils.h"
+#include <stdio.h>
+
+//**********CODE_PROVIDED_BY_PROFESSOR**********//
+#define RUN_TEST_TERMINATION_MESSAGE1 "buttonHandler_runTest()"  // Info message.
+#define RUN_TEST_TERMINATION_MESSAGE2 "terminated."              // Info message.
+#define RUN_TEST_TEXT_SIZE 2            // Make text easy to see.
+#define RUN_TEST_TICK_PERIOD_IN_MS 100  // Assume a 100 ms tick period.
+#define TEXT_MESSAGE_ORIGIN_X 0                  // Text is written starting at the right, and
+#define TEXT_MESSAGE_ORIGIN_Y (DISPLAY_HEIGHT/2) // middle.
+
+//**********MY_VAR**********//
+#define ENABLE_FLAG_ON 1            // Var for when the FLAG is on
+#define ENABLE_FLAG_OFF 0           // Var for when the enable flag is off
+#define TRUE 1                      //  sets true to 1
+#define FALSE 0                     // sets false to 0
+uint8_t buttonEnableFlag = 0;       // Initializes the enable flag
+uint8_t touchRelease = 0;           // initializes the touchrelease var
+uint8_t counter = 0;                // a way to count the
+uint8_t regionNumber = 0;           // a way to save the location of the button being pressed from one state to the next.
+uint8_t buttonsDrawn = 0;
+
+enum buttonHandler_st_m { // sets the states of the state machine
+    int_st,                 //first state
+    draw_buttons_st,
+    wait_for_touch_st,      //second state
+    touch_st,               //third state
+    touch_release_st,       //forth state
+    end_st                  //last state
+} buttonHandlerCurrentState = int_st;
+
+uint8_t buttonHandler_getRegionNumber(){    //function to find the position of the touch on the screen
+    int16_t x = 0;                          //sets the x coordinate back to 0
+    int16_t y = 0;                          //sets the x coordinate back to 0
+    uint8_t z;                              //initializes the z coordinate
+    display_getTouchedPoint(&x, &y, &z);    //finds the new coordinates
+    return simonDisplay_computeRegionNumber(x, y);  //then returns them
+}
+
+// Turn on the state machine. Part of the interlock.
+void buttonHandler_enable(){
+    buttonEnableFlag = ENABLE_FLAG_ON;  //sets the flag to on
+}
+
+// Turn off the state machine. Part of the interlock.
+void buttonHandler_disable(){
+    buttonEnableFlag = ENABLE_FLAG_OFF; //sets he flag to off
+}
+
+// The only thing this function does is return a boolean flag set by the buttonHandler state machine. To wit:
+// Once enabled, the buttonHandler state-machine first waits for a touch. Once a touch is detected, the
+// buttonHandler state-machine computes the region-number for the touched area. Next, the buttonHandler
+// state-machine waits until the player removes their finger. At this point, the state-machine should
+// set a bool flag that indicates the the player has removed their finger. Once the buttonHandler()
+// state-machine is disabled, it should clear this flag.
+// All buttonHandler_releasedDetected() does is return the value of this flag.
+// As such, the body of this function should only contain a single line of code.
+bool buttonHandler_releaseDetected(){ //sets the see if the screen has been touch
+    if(touchRelease){                   //check if the screen has been touched
+        touchRelease = 0;
+        return TRUE;                    //return true
+    }
+    else{
+        return FALSE;                   //return false
+    }
+}
+
+// Standard tick function.
+void buttonHandler_tick(){
+    switch(buttonHandlerCurrentState){                          //set your state that your on to buttonHandlerCurrentState
+    case int_st:                                                //set the first state for moore
+        break;
+    case draw_buttons_st:
+        simonDisplay_drawAllButtons();                          //Initialize the screen to draw all the buttons
+        break;
+    case wait_for_touch_st:                                     //set the second state for moore
+        simonDisplay_drawAllButtons();                          //make sure to draw all the buttons
+        break;
+    case touch_st:                                              //set the third state for moore
+        if((counter == TRUE)){                                  //if the counter has been incremented then enter the state
+            counter = FALSE;                                    //reset the counter
+            regionNumber = buttonHandler_getRegionNumber();     //save the region that you are in
+            simonDisplay_drawSquare(regionNumber, FALSE);       //display the box
+        }
+        break;
+    case touch_release_st:                                      //set the fourth state for moore
+        break;
+    case end_st:                                                //set the fifth state for moore
+        break;
+    };
+    switch(buttonHandlerCurrentState){
+    case int_st:
+
+        if(buttonEnableFlag && buttonsDrawn){                                   //if the flag has been raised then enter the state
+            display_clearOldTouchData();
+            buttonHandlerCurrentState = wait_for_touch_st;      //jump to the state
+        }
+        else if (buttonEnableFlag){
+            buttonHandlerCurrentState = draw_buttons_st;
+        }
+        break;
+    case draw_buttons_st:
+        buttonsDrawn = TRUE;
+        buttonHandlerCurrentState = wait_for_touch_st;      //jump to the state
+        break;
+    case wait_for_touch_st:                                     //set the second state for moore
+
+        if(display_isTouched()){                                //
+            display_clearOldTouchData();
+            counter++;
+            buttonHandlerCurrentState = touch_st;               //jump to the state
+        }
+        break;
+    case touch_st:                                              //set the third state for moore
+
+        if(!display_isTouched()){                               //when the display is released enter the state
+            buttonHandlerCurrentState = touch_release_st;       //jump to the state
+        }
+        break;
+    case touch_release_st:                                      //set the forth state for moore
+
+        simonDisplay_drawSquare(buttonHandler_getRegionNumber(), TRUE); //clear the boxes
+        simonDisplay_drawAllButtons();                          //then draw the buttons
+        touchRelease = TRUE;                                    //set the release var to one
+        buttonHandlerCurrentState = end_st;                     //jump to the state
+        break;
+    case end_st:                                                //set the fifth state for moore
+        if(!buttonEnableFlag){
+            buttonHandlerCurrentState = int_st;                 //jump to the state
+            simonDisplay_drawSquare(buttonHandler_getRegionNumber(), TRUE);
+        }
+        break;
+    }
+}
+
+// buttonHandler_runTest(int16_t touchCount) runs the test until
+// the user has touched the screen touchCount times. It indicates
+// that a button was pushed by drawing a large square while
+// the button is pressed and then erasing the large square and
+// redrawing the button when the user releases their touch.
+
+void buttonHandler_runTest(int16_t touchCountArg) {
+    int16_t touchCount = 0;                 // Keep track of the number of touches.
+    display_init();                         // Always have to init the display.
+    display_fillScreen(DISPLAY_BLACK);      // Clear the display.
+    // Draw all the buttons for the first time so the buttonHandler doesn't need to do this in an init state.
+    // Ultimately, simonControl will do this when the game first starts up.
+    simonDisplay_drawAllButtons();
+    buttonHandler_enable();
+    while (touchCount < touchCountArg) {    // Loop here while touchCount is less than the touchCountArg
+        buttonHandler_tick();               // Advance the state machine.
+        utils_msDelay(RUN_TEST_TICK_PERIOD_IN_MS);
+        if (buttonHandler_releaseDetected()) {  // If a release is detected, then the screen was touched.
+            touchCount++;                       // Keep track of the number of touches.
+            // Get the region number that was touched.
+            printf("button released: %d\n\r", buttonHandler_getRegionNumber());
+            // Interlocked behavior: handshake with the button handler (now disabled).
+            buttonHandler_disable();
+            utils_msDelay(RUN_TEST_TICK_PERIOD_IN_MS);
+            buttonHandler_tick();               // Advance the state machine.
+            buttonHandler_enable();             // Interlocked behavior: enable the buttonHandler.
+            utils_msDelay(RUN_TEST_TICK_PERIOD_IN_MS);
+            buttonHandler_tick();               // Advance the state machine.
+        }
+    }
+    display_fillScreen(DISPLAY_BLACK);        // clear the screen.
+    display_setTextSize(RUN_TEST_TEXT_SIZE);  // Set the text size.
+    display_setCursor(TEXT_MESSAGE_ORIGIN_X, TEXT_MESSAGE_ORIGIN_Y); // Move the cursor to a rough center point.
+    display_println(RUN_TEST_TERMINATION_MESSAGE1); // Print the termination message on two lines.
+    display_println(RUN_TEST_TERMINATION_MESSAGE2);
+}
+

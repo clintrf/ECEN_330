@@ -1,0 +1,212 @@
+#include "wamControl.h"
+#include "wamDisplay.h"
+#include "supportFiles/display.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+// since the ms per tick is low enough set by wamMain, we don't need to wait
+// for very long (if at all), but let's set it up so if the ticks were sped up
+// in the future we'd only have to change this value
+#define ADC_EXPIRED 1
+// whackMole() returns -1 if the place whacked was not an active mole
+#define INVALID_WHACK -1
+// we want to increase the level every 5 hits, so we need a value to divide the hit count by
+#define INCREMENT_LEVEL_VALUE 5
+// a string to print when the state actions hit's default
+#define STATE_ACTION_DEFAULT_MESSAGE "State action hit defuault!"
+// a string to print when the state transitions hit's default
+#define STATE_TRANSITION_DEFAULT_MESSAGE "State transition hit defuault!"
+// this value is used in the random interval functions and is added to the current level
+#define RANDOM_INTERVAL_ADDER 25
+
+// global variable to set how much time is consumed by each tick of the state machine
+// set in setMsPerTick() and getted in getMsPerTick()
+uint16_t msPerTick = 1;
+// global variable to set how many misses are allowed before game over
+// initialized to 0 so the game won't run if you don't set it before starting
+uint16_t maxMissCount = 0;
+// global variable to set how many moles can be active at one time.
+// we start at one for "easy" mode and increse it until it get's to 4 since any more
+// moles than 4 is quite hectic
+uint16_t maxActiveMoles = 1;
+// var to store the x value we get back from display_getTouchedPoint()
+int16_t x = 0;
+// var to store the y value we get back from display_getTouchedPoint()
+int16_t y = 0;
+// var to store the z value we get back from display_getTouchedPoint()
+// this is not used for anything; I really wish this variable was optional
+uint8_t z = 0;
+// value to increase while waiting for the adc to settle
+uint8_t adcSettleCounter = 0;
+// this is the "point" where the player whacked. We take the x and y values
+// returned from display_getTouchedPoint() and set them in this variable,
+// then pass it to wamDisplay_whackMole()
+wamDisplay_point_t whackPoint;
+
+// the definition of all the states in the state machine
+enum wamControl_st_t {
+    init_st,
+    activate_mole_st,
+    adc_settle_st,
+    whack_mole_st,
+} wamState = init_st;
+
+// Call this before using any wamControl_ functions.
+void wamControl_init(){
+    // all we have to do here is make sure the current state is init_st; because
+    // the state machine could have been exited at any time thanks to the buttons
+    wamState = init_st;
+}
+
+// Call this to set how much time is consumed by each tick of the controlling state machine.
+// This information makes it possible to set the awake and sleep time of moles in ms, not ticks.
+void wamControl_setMsPerTick(uint16_t setVal){
+    msPerTick = setVal;
+}
+
+// This returns the time consumed by each tick of the controlling state machine.
+uint16_t wamControl_getMsPerTick(){
+    return msPerTick;
+}
+
+// Standard tick function.
+void wamControl_tick(){
+    // state actions first
+    switch (wamState){
+    case init_st:
+        // no state actions for init_st needed
+        break;
+    case activate_mole_st:
+        // always make sure that the maximum number of active moles is on screen
+        // if the number of active moles is less than the max active moles,
+        // active one!
+        if (wamDisplay_getActiveMoleCount() < wamControl_getMaxActiveMoles()){
+            // moles, activate!
+            wamDisplay_activateRandomMole();
+        }
+        // keep ticking the moles with every SM tick
+        wamDisplay_updateAllMoleTickCounts();
+        break;
+    case adc_settle_st:
+        // increment adcSettleCounter
+        adcSettleCounter++;
+        break;
+    case whack_mole_st:
+        // get the last touched point and store it in x, y, and z
+        // z is useless but needed for display_getTouchedPoint() to function
+        display_getTouchedPoint(&x, &y, &z);
+        // once we have x and y set, set whackPoint to their values
+        // it may be possible to pass whackPoint.x and y directly into
+        // display_getTouchedPoint(),sf but for the sake of simplicitly and
+        // explicitness I store them in their own vars
+        whackPoint.x = x;
+        whackPoint.y = y;
+        // wamDisplay_whackMole() returns -1 if the mole whacked was not active
+        // or if the place whacked was not a mole
+        // so if it didn't return -1, we know a mole was successfully whacked
+        if (wamDisplay_whackMole(&whackPoint) != INVALID_WHACK){
+            // if hit score is greater than 0 and it's divisible by 5
+            // increment the level
+            // I want to increment the level every 5 hits. This might have been
+            // better as it's own function, but it's simple enough I feel like
+            // it's okay to leave it here
+            if (wamDisplay_getHitScore() != 0 && wamDisplay_getHitScore()%INCREMENT_LEVEL_VALUE == 0){
+                // increment the level
+                wamDisplay_incrementLevel();
+            }
+            // I want to have a max number of moles active per game of 4
+            // so for the first 4 levels, increment max active moles
+            if (wamDisplay_getLevel() < INCREMENT_LEVEL_VALUE){
+                wamControl_setMaxActiveMoles(wamDisplay_getLevel()+1);
+            }
+        }
+        break;
+    default:
+        // we should never get here, but have it just in case
+        printf(STATE_ACTION_DEFAULT_MESSAGE);
+        break;
+    }
+
+    // transitions next
+    switch (wamState){
+    case init_st:
+        // go striaght to activate_mole_st
+        wamState = activate_mole_st;
+        break;
+    case activate_mole_st:
+        // if the display is touched
+        if (display_isTouched()){
+            // clear old touch data so it's nice and fresh
+            display_clearOldTouchData();
+            // and go wait for the adc to settle
+            wamState = adc_settle_st;
+        }
+        break;
+    case adc_settle_st:
+        // if we've waited for long enough for the adc to settle
+        if (adcSettleCounter == ADC_EXPIRED){
+            // go to whack mole state and check the point that was whacked!
+            wamState = whack_mole_st;
+        }
+        break;
+    case whack_mole_st:
+        // all logic is done in the state action, so just go straight back to activate mole
+        // this could have been done in the transition of adc settle state,
+        // but I like having adc settle be it's own state for my ease of use
+        // and simplicity
+        wamState = activate_mole_st;
+        break;
+    default:
+        // we should never get here, but have it just in case
+        printf(STATE_TRANSITION_DEFAULT_MESSAGE);
+        break;
+    }
+}
+
+// Returns a random value that indicates how long the mole should sleep before awaking.
+wamDisplay_moleTickCount_t wamControl_getRandomMoleAsleepInterval(){
+    // a nasty one liner to get a pseudo random value
+    // I played with it a bit and this seemed to be a good value for playing
+    return rand()%(RANDOM_INTERVAL_ADDER+wamDisplay_getLevel()) + INCREMENT_LEVEL_VALUE;
+}
+
+// Returns a random value that indicates how long the mole should stay awake before going dormant.
+wamDisplay_moleTickCount_t wamControl_getRandomMoleAwakeInterval(){
+    // another nasty one liner to get a pseudo random value
+    // I played with it a bit and this seemed to be a good value for playing
+    // this is the same as get random asleep interval
+    return rand()%(RANDOM_INTERVAL_ADDER+wamDisplay_getLevel()) + INCREMENT_LEVEL_VALUE;
+}
+
+// Set the maximum number of active moles.
+void wamControl_setMaxActiveMoles(uint16_t count){
+    maxActiveMoles = count;
+}
+
+// Get the current allowable count of active moles.
+uint16_t wamControl_getMaxActiveMoles(){
+    return maxActiveMoles;
+}
+
+// Set the seed for the random-number generator.
+void wamControl_setRandomSeed(uint32_t seed){
+    srand(seed);
+}
+
+// Set the maximum number of misses until the game is over.
+void wamControl_setMaxMissCount(uint16_t missCount){
+    maxMissCount = missCount;
+}
+
+// Use this predicate to see if the game is finished.
+bool wamControl_isGameOver(){
+    // the only condition for game over is if the miss score hit it's maximum
+    // so that's all we need to check! easy!
+    if (maxMissCount == wamDisplay_getMissScore()){
+        return 1;
+    }
+    // if the max miss count is not at it's max, the game is not over so
+    // return false!
+    return 0;
+}
+

@@ -1,0 +1,211 @@
+/*
+ * simonDisplay.c
+ *
+ *  Created on: Oct 31, 2015
+ *      Author: dwdegraw
+ */
+
+#include "simonDisplay.h"
+#include "supportFiles/display.h"
+#include "supportFiles/utils.h"
+#include <stdio.h>
+
+/* THE FOLLOWING WERE PROVIDED BY THE LAB DESCRIPTION:
+------------------------------------------------------
+*/
+#define TOUCH_PANEL_ANALOG_PROCESSING_DELAY_IN_MS 60 // in ms
+#define MAX_STR 255
+#define TEXT_SIZE 2
+/*-----------------------------------------------------
+*/
+
+// a value used to divide the screen width and length by 2
+#define HALF_DIVIDER 2
+// value for the first region (top left)
+#define REGION0 0
+// value for the second region (top right)
+#define REGION1 1
+// value for the third region (bottom left)
+#define REGION2 2
+// value for the fourth region (bottom right)
+#define REGION3 3
+// we want the button to be roughly in the middle of each square section,
+// so we need to offset them
+// offset by 50 on x axis
+#define BUTTON_X_OFFSET 50
+// offset by 30 on Y  axis
+#define BUTTON_Y_OFFSET 30
+// the buttons are square, so height and width are the same
+#define BUTTON_HEIGHT_WIDTH 60
+// each square section is 1/2 of the total screen's width
+#define SQUARE_HEIGHT 160
+// and 1/2 of the total screen's height
+#define SQUARE_WIDTH 120
+
+
+// this function will take in a x and y value of where the touch occurred,
+// and return the region that was touched, either 0, 1, 2, or 3
+int8_t simonDisplay_computeRegionNumber(int16_t x, int16_t y){
+    // if the top half was touched
+    if (x < (DISPLAY_WIDTH/HALF_DIVIDER)){
+        // and the left half of the top half was touched
+        if (y < (DISPLAY_HEIGHT/HALF_DIVIDER)){
+            // region 0 was touched!
+            return REGION0;
+        }
+        else {
+            // otherwise it's region 2
+            return REGION2;
+        }
+    }
+    // the bottom half was touched
+    else {
+        // if it's on the left half of the bottom half
+        if (y < (DISPLAY_HEIGHT/HALF_DIVIDER)){
+            // it's region 1
+            return REGION1;
+        }
+        else {
+            // otherwise it's region 3
+            return REGION3;
+        }
+    }
+}
+
+// this will draw a button specified by the regionNumber passed in.
+void simonDisplay_drawButton(uint8_t regionNumber){
+    switch (regionNumber){
+    // if 0 was passed in, draw a red button in the top left
+    case REGION0:
+        display_fillRect(BUTTON_X_OFFSET, BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_RED);
+        break;
+    // if 1 was passed in, draw a yellow button in the top right
+    case REGION1:
+        display_fillRect((DISPLAY_WIDTH/HALF_DIVIDER)+BUTTON_X_OFFSET, BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_YELLOW);
+        break;
+    // if 2 was passed in, draw a blue button in the bottom left
+    case REGION2:
+        display_fillRect(BUTTON_X_OFFSET, (DISPLAY_HEIGHT/HALF_DIVIDER)+BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_BLUE);
+        break;
+    // if 3 was passed in, draw a green button in the bottom right
+    case REGION3:
+        display_fillRect((DISPLAY_WIDTH/HALF_DIVIDER)+BUTTON_X_OFFSET, (DISPLAY_HEIGHT/HALF_DIVIDER)+BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_GREEN);
+        break;
+    }
+}
+
+// this function simply calls draw button on all 4 regions
+// could maybe be done with a while loop or something, but that would probably
+// end up being just as many lines of code.
+void simonDisplay_drawAllButtons(){
+    simonDisplay_drawButton(REGION0);
+    simonDisplay_drawButton(REGION1);
+    simonDisplay_drawButton(REGION2);
+    simonDisplay_drawButton(REGION3);
+}
+
+// this fuction erases the buttons in all 4 regions.
+// I could have just modified drawButtons but that would have made that function
+// have even more if statements.
+// even still, I probably should have done it that way.
+void simonDisplay_eraseAllButtons(){
+    display_fillRect(BUTTON_X_OFFSET, BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_BLACK);
+    display_fillRect((DISPLAY_WIDTH/HALF_DIVIDER)+BUTTON_X_OFFSET, BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_BLACK);
+    display_fillRect(BUTTON_X_OFFSET, (DISPLAY_HEIGHT/HALF_DIVIDER)+BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_BLACK);
+    display_fillRect((DISPLAY_WIDTH/HALF_DIVIDER)+BUTTON_X_OFFSET, (DISPLAY_HEIGHT/HALF_DIVIDER)+BUTTON_Y_OFFSET, BUTTON_HEIGHT_WIDTH, BUTTON_HEIGHT_WIDTH, DISPLAY_BLACK);
+}
+
+// this is similar to draw button, but instead it fills the entire square region
+// if erase is true, it will draw a black square instead of a colored one
+void simonDisplay_drawSquare(uint8_t regionNo, bool erase){
+    // if erase is true, draw a black square in the region specified
+    if (erase){
+        switch (regionNo){
+        case REGION0:
+            display_fillRect(0, 0, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_BLACK);
+            break;
+        case REGION1:
+            display_fillRect(SQUARE_HEIGHT, 0, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_BLACK);
+            break;
+        case REGION2:
+            display_fillRect(0, SQUARE_WIDTH, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_BLACK);
+            break;
+        case REGION3:
+            display_fillRect(SQUARE_HEIGHT, SQUARE_WIDTH, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_BLACK);
+            break;
+        }
+    }
+
+    // if erase is not true, draw a colored square in the region as specified by the lab description
+    else {
+        switch (regionNo){
+        case REGION0:
+            display_fillRect(0, 0, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_RED);
+            break;
+        case REGION1:
+            display_fillRect(SQUARE_HEIGHT, 0, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_YELLOW);
+            break;
+        case REGION2:
+            display_fillRect(0, SQUARE_WIDTH, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_BLUE);
+            break;
+        case REGION3:
+            display_fillRect(SQUARE_HEIGHT, SQUARE_WIDTH, SQUARE_HEIGHT, SQUARE_WIDTH, DISPLAY_GREEN);
+            break;
+        }
+    }
+}
+
+/*
+--------------------------------------------------------------------------------
+              THIS CODE WAS PROVIDED IN THE LAB DESCRIPTION
+--------------------------------------------------------------------------------
+*/
+
+void simonDisplay_runTest(uint16_t touchCount) {
+  display_init();  // Always initialize the display.
+  char str[MAX_STR];   // Enough for some simple printing.
+  uint8_t regionNumber;
+  uint16_t touches = 0;
+  // Write an informational message and wait for the user to touch the LCD.
+  display_fillScreen(DISPLAY_BLACK);        // clear the screen.
+  display_setCursor(0, display_height()/HALF_DIVIDER); //
+  display_setTextSize(TEXT_SIZE);
+  display_setTextColor(DISPLAY_RED, DISPLAY_BLACK);
+  sprintf(str, "Touch and release to start the Simon demo.");
+  display_println(str);
+  display_println();
+  sprintf(str, "Demo will terminate after %d touches.", touchCount);
+  display_println(str);
+  while (!display_isTouched());       // Wait here until the screen is touched.
+  while (display_isTouched());        // Now wait until the touch is released.
+  display_fillScreen(DISPLAY_BLACK);  // Clear the screen.
+  simonDisplay_drawAllButtons();      // Draw all of the buttons.
+  bool touched = false;           // Keep track of when the pad is touched.
+  int16_t x, y;               // Use these to keep track of coordinates.
+  uint8_t z;                  // This is the relative touch pressure.
+  while (touches < touchCount) {  // Run the loop according to the number of touches passed in.
+    if (!display_isTouched() && touched) {         // user has stopped touching the pad.
+      simonDisplay_drawSquare(regionNumber, true); // Erase the square.
+      simonDisplay_drawButton(regionNumber);       // DISPLAY_REDraw the button.
+      touched = false;                                                          // Released the touch, set touched to false.
+    } else if (display_isTouched() && !touched) {   // User started touching the pad.
+      touched = true;                               // Just touched the pad, set touched = true.
+      touches++;                                                                    // Keep track of the number of touches.
+      display_clearOldTouchData();  // Get rid of data from previous touches.
+      // Must wait this many milliseconds for the chip to do analog processing.
+      utils_msDelay(TOUCH_PANEL_ANALOG_PROCESSING_DELAY_IN_MS);
+      display_getTouchedPoint(&x, &y, &z);                  // After the wait, get the touched point.
+      regionNumber = simonDisplay_computeRegionNumber(x, y);// Compute the region number.
+      simonDisplay_drawSquare(regionNumber, false);     // Draw the square (erase = false).
+    }
+  }
+  // Done with the demo, write an informational message to the user.
+  display_fillScreen(DISPLAY_BLACK);        // clear the screen.
+  display_setCursor(0, display_height()/HALF_DIVIDER); // Place the cursor in the middle of the screen.
+  display_setTextSize(TEXT_SIZE);                   // Make it readable.
+  display_setTextColor(DISPLAY_RED, DISPLAY_BLACK);  // red is foreground color, black is background color.
+  sprintf(str, "Simon demo terminated");    // Format a string using sprintf.
+  display_println(str);                     // Print it to the LCD.
+  sprintf(str, "after %d touches.", touchCount);  // Format the rest of the string.
+  display_println(str);  // Print it to the LCD.
+}

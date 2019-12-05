@@ -1,0 +1,180 @@
+/*
+ * flashSequence.c
+ *
+ *  Created on: Nov 2, 2015
+ *      Author: dwdegraw
+ */
+
+#include "flashSequence.h"
+#include "simonDisplay.h"
+#include "supportFiles/display.h"
+#include "supportFiles/utils.h"
+#include "globals.h"
+#include <stdint.h>
+#include <stdio.h>
+
+// the value for how long to wait before flashing the next square
+// we don't want to immediately erase and draw the next square
+// because then the game would be impossible to play!
+#define WAIT_EXPIRED 10
+
+// the flag that enables the state machine
+uint8_t flashEnableFlag = 0;
+// a flag to determine wether the full sequence has been flashed
+uint8_t completedFlag = 0;
+// value to increment while waiting before flashing the next square
+uint32_t waitSquareCounter = 0;
+// a value that says where in the sequence the user is currently playing.
+// always starts at zero and will eventually equal the level of the player.
+uint16_t iter = 0;
+
+// flash sequence state machine states
+enum flashSequence_st_t {
+    init_st,
+    draw_square_st,
+    wait_square_st,
+    erase_square_st,
+    done_st
+
+} cState = init_st;
+
+// Turns on the state machine. Part of the interlock.
+void flashSequence_enable(){
+    flashEnableFlag = 1;
+}
+
+// Turns off the state machine. Part of the interlock.
+void flashSequence_disable(){
+    flashEnableFlag = 0;
+}
+
+// Other state machines can call this to determine if this state machine is finished.
+bool flashSequence_completed(){
+    return completedFlag;
+}
+
+// Standard tick function.
+void flashSequence_tick(){
+    switch(cState){
+    // state actions
+    case init_st:
+        break;
+    case draw_square_st:
+        // draw the square specified by where we are in the current sequence
+        simonDisplay_drawSquare(globals_getSequenceValue(iter), 0);
+        break;
+    case wait_square_st:
+        // increment the counter
+        waitSquareCounter++;
+        break;
+    case erase_square_st:
+        // same as draw_square_st, but it erases the square
+        simonDisplay_drawSquare(globals_getSequenceValue(iter), 1);
+        break;
+    case done_st:
+        // set the completedFlag so the other SM's know we're done flashing
+        completedFlag = 1;
+        break;
+    }
+
+    // state transitions
+    switch(cState){
+    case init_st:
+        // wait till the SM is enabled, then go to draw square state
+        if (flashEnableFlag){
+            cState = draw_square_st;
+        }
+        break;
+        // wait a set amount of cycels and then go to the erase square state
+    case wait_square_st:
+        if (waitSquareCounter > WAIT_EXPIRED){
+            waitSquareCounter = 0;
+            cState = erase_square_st;
+        }
+        break;
+    case draw_square_st:
+        // after the square has been drawn, go wait
+        cState = wait_square_st;
+        break;
+    case erase_square_st:
+        // if we're at the end of the sequence, then we're done and go to done state
+        if (iter >= globals_getSequenceIterationLength()){
+            cState = done_st;
+        }
+        // otherwise, increment our position (iter) and go draw the next square in sequence
+        else {
+            iter++;
+            cState = draw_square_st;
+        }
+        break;
+    // wait till the enable flag is low, then reset everything and go back to init
+    case done_st:
+        if (!flashEnableFlag){
+            iter = 0;
+            completedFlag = 0;
+            cState = init_st;
+        }
+        break;
+    }
+}
+
+/*
+--------------------------------------------------------------------------------
+              THIS CODE WAS PROVIDED IN THE LAB DESCRIPTION
+--------------------------------------------------------------------------------
+*/
+
+// This will set the sequence to a simple sequential pattern.
+// It starts by flashing the first color, and then increments the index and flashes the first
+// two colors and so forth. Along the way it prints info messages to the LCD screen.
+#define TEST_SEQUENCE_LENGTH 8  // Just use a short test sequence.
+uint8_t flashSequence_testSequence[TEST_SEQUENCE_LENGTH] = {SIMON_DISPLAY_REGION_0,
+                                SIMON_DISPLAY_REGION_1,
+                                SIMON_DISPLAY_REGION_2,
+                                SIMON_DISPLAY_REGION_3,
+                                SIMON_DISPLAY_REGION_3,
+                                SIMON_DISPLAY_REGION_2,
+                                SIMON_DISPLAY_REGION_1,
+                                SIMON_DISPLAY_REGION_0};
+#define INCREMENTING_SEQUENCE_MESSAGE1 "Incrementing Sequence"  // Info message.
+#define RUN_TEST_COMPLETE_MESSAGE "Runtest() Complete"      // Info message.
+#define MESSAGE_TEXT_SIZE 2                                 // Make the text easy to see.
+
+// Print the incrementing sequence message.
+void flashSequence_printIncrementingMessage() {
+  display_fillScreen(DISPLAY_BLACK);// Otherwise, tell the user that you are incrementing the sequence.
+  display_setCursor(0, display_height()/2);     // Roughly centered.
+  display_println(INCREMENTING_SEQUENCE_MESSAGE1);  // Print the message.
+  utils_msDelay(2000);                              // Hold on for 2 seconds.
+  display_fillScreen(DISPLAY_BLACK);            // Clear the screen.
+}
+
+void flashSequence_runTest() {
+  display_init();   // We are using the display.
+  display_fillScreen(DISPLAY_BLACK);    // Clear the display.
+  globals_setSequence(flashSequence_testSequence, TEST_SEQUENCE_LENGTH);    // Set the sequence.
+  flashSequence_enable();                   // Enable the flashSequence state machine.
+  int16_t sequenceLength = 1;                           // Start out with a sequence of length 1.
+  globals_setSequenceIterationLength(sequenceLength);   // Set the iteration length.
+  display_setTextSize(MESSAGE_TEXT_SIZE);           // Use a standard text size.
+  while (1) {                   // Run forever unless you break.
+    flashSequence_tick();   // tick the state machine.
+    utils_msDelay(1);   // Provide a 1 ms delay.
+    if (flashSequence_completed()) {  // When you are done flashing the sequence.
+      flashSequence_disable();  // Interlock by first disabling the state machine.
+      flashSequence_tick(); // tick is necessary to advance the state.
+      utils_msDelay(1);     // don't really need this here, just for completeness.
+      flashSequence_enable();   // Finish the interlock by enabling the state machine.
+      utils_msDelay(1); // Wait 1 ms for no good reason.
+      sequenceLength++; // Increment the length of the sequence.
+      if (sequenceLength > TEST_SEQUENCE_LENGTH) // Stop if you have done the full sequence.
+        break;
+      flashSequence_printIncrementingMessage();  // Tell the user that you are going to the next step in the pattern.
+      globals_setSequenceIterationLength(sequenceLength);   // Set the length of the pattern.
+    }
+  }
+  // Let the user know that you are finished.
+  display_fillScreen(DISPLAY_BLACK);
+  display_setCursor(0, display_height()/2);
+  display_println(RUN_TEST_COMPLETE_MESSAGE);
+}

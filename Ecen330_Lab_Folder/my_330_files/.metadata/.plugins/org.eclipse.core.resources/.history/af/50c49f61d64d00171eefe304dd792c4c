@@ -1,0 +1,751 @@
+/*
+ * simonControl.c
+ *
+ *  Created on: Jun 8, 2017
+ *      Author: clintrf
+ */
+
+
+#include "verifySequence_runTest.h"
+#include "flashSequence.h"
+#include "buttonHandler.h"
+#include "simonDisplay.h"
+#include "simonControl.h"
+#include "supportFiles/display.h"
+#include "supportFiles/utils.h"
+#include "globals.h"
+#include <stdio.h>
+#include <stdint.h>
+#include "../Lab2_switch_button/buttons.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// This is the message that's shown at game over.
+// note that the current level will also be drawn after it, but since
+// that value will change, we don't hard code it here.
+#define GAME_OVER_MSG "Longest Sequence: "
+// the text to prompt a user to continue to the next level
+#define NEW_LEVEL_MSG "Touch for next level"
+// the subtext of the title screen
+#define TOUCH_TO_START_MSG "TOUCH TO START"
+// the title of the title screen
+#define SIMON_MSG "SIMON"
+// this will print when a user has successfully completed a level sequence
+#define YAY_MSG "YAY!"
+// this is the size of the SIMON_MSG title text
+#define SIMON_MSG_TEXT_SIZE 5
+// this is the size of all other texts
+#define SMALL_MSG_TEXT_SIZE 2
+// how to display the YAY_MSG before going to the next screen
+#define YAY_EXPIRED 40
+// we always start at level 4, which is really level 0 from a player's
+// perspective3
+#define STARTING_LEVEL 4
+// coordinates of the SIMON_MSG title text
+#define SIMON_MSG_X_COORDINATE 80
+#define SIMON_MSG_Y_COORDINATE 90
+// coordinate of the title screen sub text
+#define TOUCH_TO_START_MSG_X_COORDINATE 70
+#define TOUCH_TO_START_MSG_Y_COORDINATE 140
+// coordinates of the winning message
+#define YAY_MSG_X_COORDINATE 120
+#define YAY_MSG_Y_COORDINATE 100
+// coordinates of the game over text
+#define GAME_OVER_MSG_X_COORDINATE 50
+// coordinate of the highest level x value
+#define LEVEL_MSG_X_COORDINATE 280
+
+// we always start at level 4
+uint16_t currentLevel = STARTING_LEVEL;
+// this value is where in the level we're at.
+// this will increment until it reaches the level length, then the level will
+// increase and start over.
+uint16_t currentPlace = 1;
+// this stores the level sequence that's generated on each new level.
+uint8_t bigSequence[GLOBALS_MAX_FLASH_SEQUENCE] = {0};
+// this flag says whether the player lost
+uint8_t userFailFlag = 0;
+// this is incremented until it reaches YAY_EXPIRED
+uint8_t yayCounter = 0;
+// this is incremented until it reaces YAY_EXPIRED
+uint8_t endCounter = 0;
+// this is incremented until it reaces YAY_EXPIRED
+uint8_t newCounter = 0;
+// flag the says whether the board has already been drawn and initialized
+uint8_t initFlag = 0;
+// a value to give to srand. This will be set to the amount of cycles
+// it took a user to tap to start the game
+uint32_t seed = 0;
+// this is a flag that says whether or not to re draw the title screen
+// we don't want to redraw it if the player is continuing to the next level
+uint8_t simonFlag = 0;
+// this flag is used to tell if we need to regenerate a sequence
+uint8_t nextFlag = 0;
+
+// the control state machine states
+enum simonControl_st_t {
+    init_st,
+    wait_for_untouch_st,
+    begin_st,
+    enable_flash_st,
+    wait_for_flash_st,
+    disable_flash_st,
+    enable_verify_st,
+    wait_for_verify_st,
+    disable_verify_st,
+    print_end_game_st,
+    wait_end_game_st,
+    print_yay_st,
+    wait_yay_st,
+    print_new_level_st,
+    wait_new_level_st
+
+} controlState = init_st;
+
+// this will generate a psudo radom sequence that will be played
+void generateSequence(){
+    srand(seed);
+    for (int i = 0; i < currentLevel; i++){
+        bigSequence[i] = rand() % (STARTING_LEVEL);
+    }
+}
+
+// the state machine tick function
+void simonControl_tick(){
+    switch (controlState){
+    // state actions first
+    case init_st:
+        if (!initFlag){
+            // wait until the enable flag goes high
+            // if simonFlag is low, we need to draw the starting screen
+            if (!simonFlag){
+                // display the start screen with TOUCH TO START text
+                display_setCursor(SIMON_MSG_X_COORDINATE,SIMON_MSG_Y_COORDINATE);
+                display_setTextSize(SIMON_MSG_TEXT_SIZE);
+                display_println(SIMON_MSG);
+                display_setCursor(TOUCH_TO_START_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+                display_setTextSize(SMALL_MSG_TEXT_SIZE);
+                display_println(TOUCH_TO_START_MSG);
+                // set the simonFlag high so we don't re draw the title screen
+                // for each iteration of the sequence
+                simonFlag = 1;
+            }
+            // set the initFlag high specifying that the SM has been initialized
+            initFlag = 1;
+        }
+        // while we wait for the enable flag to go high, increment seed valud
+        // this will be used to generate a random sequence for the game
+        seed++;
+        break;
+    case wait_for_untouch_st:
+        break;
+    case begin_st:
+        // set how long the level sequence should go to based on where we are
+        // in the overall level sequence
+        globals_setSequenceIterationLength(currentPlace);
+        break;
+    case enable_flash_st:
+        // turn on the flash state machine to flash the sequence
+        flashSequence_enable();
+        break;
+    case wait_for_flash_st:
+        break;
+    case disable_flash_st:
+        // turn off the flash state machine now that it's completed
+        flashSequence_disable();
+        break;
+    case enable_verify_st:
+        // enable the verification state machine that will check the buttons
+        // pressed by the players against the values in the sequence
+        verifySequence_enable();
+        break;
+    case wait_for_verify_st:
+        break;
+    case disable_verify_st:
+        // turn off the verify state machine now that it's completed
+        verifySequence_disable();
+        break;
+    case print_yay_st:
+        // set the cursor to the correct place and print the "YAY!" winning message
+        display_setCursor(YAY_MSG_X_COORDINATE,YAY_MSG_Y_COORDINATE);
+        display_setTextSize(SIMON_MSG_TEXT_SIZE);
+        display_println(YAY_MSG);
+        break;
+    case wait_yay_st:
+        // increment yayCounter while waiting for it to reach the expired value
+        yayCounter++;
+        break;
+    case print_new_level_st:
+        break;
+    case wait_new_level_st:
+        // increment newCounter while waiting for it to reach the expired value
+        newCounter++;
+        break;
+    case print_end_game_st:
+        // set the text to the correct places and print out the game over screen
+        // it will tell the player the highest level they completed
+        display_setCursor(GAME_OVER_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+        display_setTextSize(SMALL_MSG_TEXT_SIZE);
+        display_println(GAME_OVER_MSG);
+        display_setCursor(LEVEL_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+        printf("the current level is %d and the starting level is %d", currentLevel, STARTING_LEVEL);
+        display_println(currentLevel);
+        break;
+    case wait_end_game_st:
+        // increment endCounter while waiting for it to reach the expired value
+        endCounter++;
+        break;
+    }
+
+    // state transitions
+    switch (controlState){
+    case init_st:
+        // if we got here from the "touch for next level" screen,
+        // generate a new sequence and go straight into the game
+        if (nextFlag){
+            generateSequence();
+            globals_setSequence(bigSequence, currentLevel);
+            controlState = begin_st;
+        }
+        // otherwise, the start screen is showing and we need to wait until
+        // the display is touched to start the game
+        else if (display_isTouched()){
+            generateSequence();
+            globals_setSequence(bigSequence, currentLevel);
+            controlState = wait_for_untouch_st;
+        }
+        break;
+    case wait_for_untouch_st:
+        // the display was touched in order to get to this state, so we want to
+        // wait until it's no longer touched. Once that happens, over write
+        // the title screen text with black text.
+        // This could potentially be as simple as blacking the screen,
+        // but I was worried about missing interrupts since blanking the screen takes so long.
+        if (!display_isTouched()){
+            display_setTextColor(DISPLAY_BLACK);
+            display_setCursor(SIMON_MSG_X_COORDINATE,SIMON_MSG_Y_COORDINATE);
+            display_setTextSize(SIMON_MSG_TEXT_SIZE);
+            display_println(SIMON_MSG);
+            display_setCursor(TOUCH_TO_START_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_setTextSize(SMALL_MSG_TEXT_SIZE);
+            display_println(TOUCH_TO_START_MSG);
+            display_setTextColor(DISPLAY_WHITE);
+            controlState = begin_st;
+        }
+        break;
+    case begin_st:
+        controlState = enable_flash_st;
+        break;
+    case enable_flash_st:
+        controlState = wait_for_flash_st;
+        break;
+    case wait_for_flash_st:
+        // wait for the flash sequence to flash and complete
+        if (flashSequence_completed()){
+            controlState = disable_flash_st;
+        }
+        break;
+    case disable_flash_st:
+        controlState = enable_verify_st;
+        break;
+    case enable_verify_st:
+        controlState = wait_for_verify_st;
+        break;
+    case wait_for_verify_st:
+        // wait until the verify state machine is done.
+        // this can either be because the user correctly tapped the sequence,
+        // or made a mistake. As soon as a mistake is made or timeout happens,
+        // the verify state machine will be complete.
+        if (verifySequence_isComplete()){
+            controlState = disable_verify_st;
+        }
+        break;
+    case disable_verify_st:
+        // if we're at the end of the sequence for the current level, the
+        // player won
+        if (currentPlace == currentLevel){
+            controlState = print_yay_st;
+        }
+        // if the player lost by timeout or incorrect sequence, go to game over
+        else if (verifySequence_isTimeOutError() || verifySequence_isUserInputError()){
+            // set a flag to indicate the player lost
+            userFailFlag = 1;
+            controlState = print_end_game_st;
+        }
+        // the player neither won nor lost, so we're still in the sequence so
+        // flash the next sequence in the current level
+        else {
+            currentPlace++;
+            controlState = begin_st;
+        }
+        break;
+    case print_yay_st:
+        controlState = wait_yay_st;
+        break;
+    case wait_yay_st:
+        // we want to display the yay message for a time (40 cycles), so
+        // wait for the counter to hit the expired value
+        if (yayCounter == YAY_EXPIRED){
+            // reset the counter
+            yayCounter = 0;
+            // "erase" the YAY text by drawing black text over it.
+            display_setTextColor(DISPLAY_BLACK);
+            display_setCursor(YAY_MSG_X_COORDINATE,YAY_MSG_Y_COORDINATE);
+            display_setTextSize(SIMON_MSG_TEXT_SIZE);
+            display_println(YAY_MSG);
+            // draw the "touch for new level" text
+            display_setTextColor(DISPLAY_WHITE);
+            display_setCursor(GAME_OVER_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_setTextSize(SMALL_MSG_TEXT_SIZE);
+            display_println(NEW_LEVEL_MSG);
+            controlState = print_new_level_st;
+        }
+        break;
+    case print_new_level_st:
+        controlState = wait_new_level_st;
+        break;
+    case wait_new_level_st:
+        // if the display was touched, we want to increse the level length and go
+        // straight into gameplay without displaying the start message.
+        if (display_isTouched()){
+            // erase the new level text by drawing black text over it
+            display_setTextColor(DISPLAY_BLACK);
+            display_setCursor(GAME_OVER_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_setTextSize(SMALL_MSG_TEXT_SIZE);
+            display_println(NEW_LEVEL_MSG);
+            display_setTextColor(DISPLAY_WHITE);
+            // increment level
+            currentLevel++;
+            // reset place back to 1 for new level
+            currentPlace = 1;
+            // set all the flags back to their initial values
+            initFlag = 0;
+            yayCounter = 0;
+            endCounter = 0;
+            newCounter = 0;
+            // set a flag to specify that we're going from the end of a successful
+            // round into a new level
+            nextFlag = 1;
+            controlState = init_st;
+        }
+        // the the player didn't touch the screen before the message expired,
+        // they don't want to play another level so go back to the title screen.
+        else if (newCounter == YAY_EXPIRED){
+            // erase the new level message
+            display_setTextColor(DISPLAY_BLACK);
+            display_setCursor(GAME_OVER_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_setTextSize(SMALL_MSG_TEXT_SIZE);
+            display_println(NEW_LEVEL_MSG);
+            display_setTextColor(DISPLAY_WHITE);
+            controlState = print_end_game_st;
+        }
+        break;
+    case print_end_game_st:
+        controlState = wait_end_game_st;
+        break;
+    case wait_end_game_st:
+        // display the game over text for a while
+        if (endCounter == YAY_EXPIRED){
+            // erase the game over text
+            display_setTextColor(DISPLAY_BLACK);
+            display_setCursor(GAME_OVER_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_setTextSize(SMALL_MSG_TEXT_SIZE);
+            display_println(GAME_OVER_MSG);
+            display_setCursor(LEVEL_MSG_X_COORDINATE,TOUCH_TO_START_MSG_Y_COORDINATE);
+            display_println(currentLevel);
+            display_setTextColor(DISPLAY_WHITE);
+            // reset starting level
+            currentLevel = STARTING_LEVEL;
+            // reset place to 1 for new game
+            currentPlace = 1;
+            // reset all flags and counters to their inital values
+            yayCounter = 0;
+            endCounter = 0;
+            newCounter = 0;
+            initFlag = 0;
+            simonFlag = 0;
+            nextFlag = 0;
+            controlState = init_st;
+        }
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+#define START_MSG "TOUCH TO START"
+#define SIMON_MSG "SIMON"
+#define YAY_MSG "Yay!"
+#define NEW_L_MSG "Touch for new level"
+#define LONG_MSG "Longest Sequence: "
+
+#define START_MSG_X_COORD DISPLAY_WIDTH /4
+#define START_MSG_Y_COORD DISPLAY_HEIGHT/2
+
+#define SIMON_MSG_X_COORD DISPLAY_WIDTH /4
+#define SIMON_MSG_Y_COORD DISPLAY_HEIGHT/3
+
+#define YAY_MSG_X_COORD DISPLAY_WIDTH/3
+#define YAY_MSG_Y_COORD DISPLAY_HEIGHT/3
+
+#define NEW_L_MSG_X_COORD 50
+#define NEW_L_MSG_Y_COORD YAY_MSG_Y_COORD
+
+#define LONG_MSG_X_COORD 50
+#define LONG_MSG_Y_COORD YAY_MSG_Y_COORD
+
+#define NUM_MSG_X_COORD 280
+#define NUM_MSG_Y_COORD YAY_MSG_Y_COORD
+
+#define FALSE 0
+#define TRUE 1
+
+#define TEXT_SIZE_L 5
+#define TEXT_SIZE_S 2
+#define WAIT_TIME 50
+#define START_LEVEL 4
+
+
+uint8_t myArray[GLOBALS_MAX_FLASH_SEQUENCE];
+uint8_t currLevel = START_LEVEL;
+uint8_t currIter = 1;
+uint8_t randNum = 0;                                //Number that seeds the random number
+uint8_t yayCounter = 0;
+uint8_t newLevelCounter = 0;
+uint8_t longestSeqCounter = 0;
+
+
+
+*//**********FLAGS**********/
+/*
+uint8_t initFlag = 0;
+uint8_t nextFlag = 0;
+
+
+
+
+enum control_st_m{
+    control_init_st,                    //the initializing state
+    control_touch_st,          //state waiting for a touch
+    control_flash_enable_st,                   //state for the flash sequence
+    control_flash_disable_st,
+    control_verify_enable,
+    control_verify_disable,
+    control_yay_st,
+    control_new_level_st,
+    control_longest_sq_st
+}controlCurrent = control_init_st;      //state that holds the current state
+
+
+
+
+
+
+
+void simonDebugStatePrint() {
+  static control_st_m previousState;
+  static bool firstPass = true;
+  // Only print the message if:
+  // 1. This the first pass and the value for previousState is unknown.
+  // 2. previousState != currentState - this prevents reprinting the same state name over and over.
+  if (previousState != controlCurrent || firstPass) {
+    firstPass = false;                // previousState will be defined, firstPass is false.
+    previousState = controlCurrent;     // keep track of the last state that you were in.
+    //printf("msCounter:%d\n\r", msCounter);
+    switch(controlCurrent) {            // This prints messages based upon the state that you were in.
+        case control_init_st:
+            printf("control_init_st\n\r");
+            break;
+        case control_touch_st:
+            printf("control_touch_st\n\r");
+            break;
+        case control_flash_enable_st:
+            printf("control_flash_enable_st\n\r");
+            break;
+        case control_flash_disable_st:
+            printf("control_flash_disable_st\n\r");
+            break;
+        case control_verify_enable:
+            printf("control_verify_enable\n\r");
+            break;
+        case control_verify_disable:
+            printf("control_verify_disable\n\r");
+            break;
+        case control_yay_st:
+            printf("control_yay_st\n\r");
+            break;
+        case control_new_level_st:
+            printf("control_new_level_st\n\r");
+            break;
+        case control_longest_sq_st:
+            printf("control_longest_sq_st\n\r");
+            break;
+     }
+  }
+}
+
+
+
+
+
+
+
+
+void randNumGen(){
+    srand(randNum);
+    for(uint8_t i = 0; i < currLevel; i++){
+        myArray[i] = rand() % (START_LEVEL);
+    }
+}
+//todo
+
+void simonControl_tick(){
+    switch(controlCurrent){
+    case control_init_st:                  //state number 1 for moore
+//        randNum++;
+//        randNumGen();
+//        globals_setSequence(myArray,currLevel);
+        if(!initFlag){
+            display_setCursor(START_MSG_X_COORD, START_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(START_MSG);
+            display_setCursor(SIMON_MSG_X_COORD, SIMON_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(SIMON_MSG);
+            initFlag = TRUE;                      //turn on the init Flag saying that the screen is initialized
+        }
+        randNum++;
+        break;
+    case control_touch_st:        //state number 2 for moore
+        break;
+    case control_flash_enable_st:          //state number 4 for moore
+        flashSequence_enable();
+        break;
+    case control_flash_disable_st:
+        flashSequence_disable();
+        break;
+    case control_verify_enable:            //state number 7 for moore
+        verifySequence_enable();
+        break;
+    case control_verify_disable:           //state number 9 for moore
+        verifySequence_disable();
+        break;
+    case control_yay_st:
+        yayCounter++;
+        break;
+    case control_new_level_st:
+        newLevelCounter++;
+        break;
+    case control_longest_sq_st:
+        longestSeqCounter++;
+        break;
+    }
+    switch(controlCurrent){
+    case control_init_st:                  //state number 1 for mealy
+        if(nextFlag){
+            randNumGen();
+            globals_setSequence(myArray,currLevel);
+
+            globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_flash_enable_st;
+        }
+        else if(display_isTouched()){
+            randNumGen();
+            globals_setSequence(myArray,currLevel);
+            controlCurrent = control_touch_st;
+        }
+        break;
+    case control_touch_st:        //state number 2 for mealy
+        if(!display_isTouched()){
+            display_setCursor(START_MSG_X_COORD, START_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(START_MSG);
+            display_setCursor(SIMON_MSG_X_COORD, SIMON_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(SIMON_MSG);
+            globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_flash_enable_st;
+        }
+        break;
+    case control_flash_enable_st:          //state number 4 for mealy
+        if(flashSequence_isComplete()){
+            controlCurrent = control_flash_disable_st;
+        }
+        break;
+    case control_flash_disable_st:
+        controlCurrent = control_verify_enable;
+        break;
+    case control_verify_enable:            //state number 7 for mealy
+        if(verifySequence_isComplete()){
+            controlCurrent = control_verify_disable;
+        }
+        break;
+    case control_verify_disable:           //state number 9 for mealy
+        if(currIter == currLevel){
+            display_setCursor(YAY_MSG_X_COORD, YAY_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(YAY_MSG);
+            controlCurrent = control_yay_st;
+        }
+        else if(verifySequence_isTimeOutError()|| verifySequence_isUserInputError()){
+            display_setCursor(LONG_MSG_X_COORD, LONG_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X_COORD, NUM_MSG_Y_COORD);
+            display_println(currLevel - START_LEVEL);
+            controlCurrent = control_longest_sq_st;
+        }
+        else{
+            currIter++;
+            globals_setSequenceIterationLength(currIter);
+            controlCurrent = control_flash_enable_st;
+        }
+        break;
+    case control_yay_st:
+        if(yayCounter == WAIT_TIME){
+            //black yay
+            display_setCursor(YAY_MSG_X_COORD, YAY_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_L);
+            display_println(YAY_MSG);
+            //print new level
+            display_setCursor(NEW_L_MSG_X_COORD, NEW_L_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            controlCurrent = control_new_level_st;
+        }
+        break;
+    case control_new_level_st:
+        if(newLevelCounter == WAIT_TIME){
+            //black new level
+            display_setCursor(NEW_L_MSG_X_COORD, NEW_L_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            //print longSQ
+            display_setCursor(LONG_MSG_X_COORD, LONG_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_WHITE);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X_COORD, NUM_MSG_Y_COORD);
+            display_println(currLevel - START_LEVEL);
+            controlCurrent = control_longest_sq_st;
+        }
+        if(display_isTouched()){
+            //black new level
+            display_setCursor(NEW_L_MSG_X_COORD, NEW_L_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(NEW_L_MSG);
+            //Initialize var
+            currLevel++;
+            currIter = TRUE;
+            nextFlag = TRUE;
+            yayCounter = FALSE;
+            newLevelCounter = FALSE;
+            longestSeqCounter = FALSE;
+            controlCurrent = control_init_st;
+        }
+        break;
+    case control_longest_sq_st:
+        if(longestSeqCounter == WAIT_TIME){
+            //black longSQ
+            display_setCursor(LONG_MSG_X_COORD, LONG_MSG_Y_COORD);
+            display_setTextColor(DISPLAY_BLACK);
+            display_setTextSize(TEXT_SIZE_S);
+            display_println(LONG_MSG);
+            display_setCursor(NUM_MSG_X_COORD, NUM_MSG_Y_COORD);
+            display_println(currLevel - START_LEVEL);
+            //Initialize var
+            currLevel = START_LEVEL;
+            currIter = TRUE;
+            initFlag = FALSE;
+            nextFlag = FALSE;
+            yayCounter = FALSE;
+            newLevelCounter = FALSE;
+            longestSeqCounter = FALSE;
+            controlCurrent = control_init_st;
+        }
+        break;
+    }
+}
+*/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="system_wrapper.bit" key="EE330_hw_platform_0-bitFile"/>
+	<item value="EE330_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="" key="EE330_hw_platform_0-bmmFile"/>
+	<item value="Local" key="EE330_hw_platform_0-target"/>
+	<item value="true" key="EE330_hw_platform_0-runResetZynq"/>
+</section>

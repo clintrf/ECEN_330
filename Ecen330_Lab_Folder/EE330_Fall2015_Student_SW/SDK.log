@@ -1,0 +1,127 @@
+10:42:33 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ZYBO/EE330_Fall2015_EE390_Winter2016/EE330_Fall2015_EE390_Winter2016_Final_SW_Student/EE330_hw_platform_0/system_wrapper.bit"
+10:43:30 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: A program file was not specified in the launch configuration.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+10:43:42 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: A program file was not specified in the launch configuration.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+10:43:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:43:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:43:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:43:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:43:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:10 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:10 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:10 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:43 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:43 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:43 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:44 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:44 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:44:44 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:04 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+10:45:04 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:386)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:297)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:245)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+10:45:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:13 INFO  : ps7_init is completed.
+10:45:13 INFO  : ps7_post_config is completed.
+10:45:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:45:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:01 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:01 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:01 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:05 INFO  : Inferring section assignments and sizes from elf file: C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW_Student\Consolidated_330_SW\Debug\Consolidated_330_SW.elf
+10:46:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+10:46:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:49:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:05:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:33:44 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ZYBO/EE330_Fall2015_EE390_Winter2016/EE330_Fall2015_Student_SW/EE330_hw_platform_0/system_wrapper.bit"
+17:33:54 INFO  : ps7_init is completed.
+17:33:54 INFO  : ps7_post_config is completed.
+17:33:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:33:55 ERROR : No such port: COM25
+17:34:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:34:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:35:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:35:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:35:04 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:35:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

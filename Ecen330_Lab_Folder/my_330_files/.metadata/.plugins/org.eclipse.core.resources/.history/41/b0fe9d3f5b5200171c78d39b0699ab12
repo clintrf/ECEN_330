@@ -1,0 +1,847 @@
+#include "supportFiles/display.h"
+#include "wamDisplay.h"
+#include "wamControl.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+//**********MY_VARS**********/
+
+#define MOLE_HOLE_RADIUS 30
+#define MOLE_RADIUS 20
+#define TEXT_SIZE_L 3
+#define TEXT_SIZE_S 2
+#define STR_SIZE 20
+
+#define BOARD_OFFSET_Y 18
+#define BOARD_HOLE_OFFSET_X 120
+#define BOARD_HOLE_OFFSET_Y 65
+
+#define BOARD_SIZE_X DISPLAY_WIDTH
+#define BOARD_SIZE_Y DISPLAY_HEIGHT - BOARD_OFFSET_Y
+#define BOARD_ORIGIN_X_Y 0
+#define TRUE 1
+#define FALSE 0
+#define FAIL -1
+#define BOARD_NUM_HOLES_4 4
+#define BOARD_NUM_HOLES_6 6
+#define BOARD_NUM_HOLES_9 9
+
+#define START_MSG_0 "Whack a Mole!"
+#define START_MSG_1 "Touch Screen to Start"
+
+#define BOARD_STAT_0 "Hits:%d"
+#define BOARD_STAT_1 "Miss:%d"
+#define BOARD_STAT_2 "Level:%d"
+
+#define GAME_OVER_MSG_0 "Game Over"
+#define GAME_OVER_MSG_1 "Hits:%d"
+#define GAME_OVER_MSG_2 "Misses:%d"
+#define GAME_OVER_MSG_3 "Final Level:%d"
+#define GAME_OVER_MSG_4 "(Touch to Try Again)"
+
+#define START_MSG_0_X 45
+#define START_MSG_1_X 30
+
+#define START_MSG_0_Y 100
+#define START_MSG_1_Y 130
+
+#define BOARD_STAT_0_X 0
+#define BOARD_STAT_1_X 100
+#define BOARD_STAT_2_X 200
+#define BOARD_STAT_0_Y DISPLAY_HEIGHT-BOARD_OFFSET_Y
+
+#define GAME_OVER_MSG_0_X 80
+#define GAME_OVER_MSG_1_X 125
+#define GAME_OVER_MSG_2_X 115
+#define GAME_OVER_MSG_3_X 85
+#define GAME_OVER_MSG_4_X 45
+
+#define GAME_OVER_MSG_0_Y 50
+#define GAME_OVER_MSG_1_Y 90
+#define GAME_OVER_MSG_2_Y 110
+#define GAME_OVER_MSG_3_Y 130
+#define GAME_OVER_MSG_4_Y 170
+
+#define MOLE_HOLE_0_X (MOLE_HOLE_1_X - BOARD_HOLE_OFFSET_X)
+#define MOLE_HOLE_1_X DISPLAY_WIDTH/2
+#define MOLE_HOLE_2_X (MOLE_HOLE_1_X + BOARD_HOLE_OFFSET_X)
+
+#define MOLE_HOLE_0_Y (MOLE_HOLE_1_Y - BOARD_HOLE_OFFSET_Y)
+#define MOLE_HOLE_1_Y (DISPLAY_HEIGHT-BOARD_OFFSET_Y)/2
+#define MOLE_HOLE_2_Y (MOLE_HOLE_1_Y + BOARD_HOLE_OFFSET_Y)
+
+#define LINE_0_X DISPLAY_WHITE/3
+#define LINE_1_X LINE_0_X*2
+#define LINE_0_Y BOARD_STAT_0_Y/3
+#define LINE_1_Y LINE_0_Y*2
+
+#define MOLE_HOLE_0_0 0
+#define MOLE_HOLE_1_0 1
+#define MOLE_HOLE_2_0 2
+#define MOLE_HOLE_0_1 3
+#define MOLE_HOLE_1_1 4
+#define MOLE_HOLE_2_1 5
+#define MOLE_HOLE_0_2 6
+#define MOLE_HOLE_1_2 7
+#define MOLE_HOLE_2_2 8
+#define MOLE_HOLE_FAIL 10
+
+//**********MY_VAR**********/
+uint8_t numMoleHoles = 0;
+char statStr0[STR_SIZE];
+char statStr1[STR_SIZE];
+char statStr2[STR_SIZE];
+
+char endStatMsgStr1[STR_SIZE];
+char endStatMsgStr2[STR_SIZE];
+char endStatMsgStr3[STR_SIZE];
+
+
+uint16_t statCount0 = 0;
+uint16_t statCount1 = 0;
+uint16_t statCount2 = 0;
+
+uint16_t activeMoleCount = 0;
+wamDisplay_point_t moleCoord;
+
+
+//**********PROTOTYPES*********/
+void wamDisplay_drawAllMoleHoles();
+void wamDisplay_drawMoleHole(uint8_t moleHoleReion, uint8_t drwHole );
+void wamDisplay_drawMole(wamDisplay_point_t moleReion, uint8_t drwMole);
+void wamDisplay_getMoleCoor(uint16_t index);
+
+
+
+
+/********************** typedefs **********************/
+// This keeps track of all mole information.
+typedef struct {
+        wamDisplay_point_t origin;  // This is the origin of the hole for this mole.
+        // A mole is active if either of the tick counts are non-zero. The mole is dormant otherwise.
+        // During operation, non-zero tick counts are decremented at a regular rate by the control state machine.
+        // The mole remains in his hole until ticksUntilAwake decrements to zero and then he pops out.
+        // The mole remains popped out of his hole until ticksUntilDormant decrements to zero.
+        // Once ticksUntilDomant goes to zero, the mole hides in his hole and remains dormant until activated again.
+        wamDisplay_moleTickCount_t ticksUntilAwake;  // Mole will wake up (pop out of hole) when this goes from 1 -> 0.
+        wamDisplay_moleTickCount_t ticksUntilDormant; // Mole will go dormant (back in hole) this goes 1 -> 0.
+} wamDisplay_moleInfo_t;
+
+// This will contain pointers to all of the mole info records.
+// This will ultimately be treated as an array of pointers.
+static wamDisplay_moleInfo_t** wamDisplay_moleInfo;
+
+// Allocates the memory for wamDisplay_moleInfo_t records.
+// Computes the origin for each mole assuming a simple row-column layout:
+// 9 moles: 3 rows, 3 columns, 6 moles: 2 rows, 3 columns, 4 moles: 2 rows, 2 columns
+// Also inits the tick counts for awake and dormant.
+void wamDisplay_computeMoleInfo() {
+    wamDisplay_moleInfo = (wamDisplay_moleInfo_t**) malloc(numMoleHoles * sizeof(wamDisplay_moleInfo_t*)); // Initialize VAR through MALLOC
+    for(uint16_t i = 0; i< numMoleHoles; i++){
+        wamDisplay_moleInfo[i] = (wamDisplay_moleInfo_t*) malloc(sizeof(wamDisplay_moleInfo_t));
+    }
+    for (uint16_t j=0; j<numMoleHoles; j++) {
+        wamDisplay_getMoleCoor(j+1);
+        wamDisplay_moleInfo[j]->origin = moleCoord;
+        wamDisplay_moleInfo[j]->ticksUntilAwake = 0;
+        wamDisplay_moleInfo[j]->ticksUntilDormant = 0;
+    }
+}
+
+void wamDisplay_selectMoleCount(wamDisplay_moleCount_e moleCount){
+    switch(moleCount){
+    case wamDisplay_moleCount_4:
+        numMoleHoles = BOARD_NUM_HOLES_4;
+        break;
+    case wamDisplay_moleCount_6:
+        numMoleHoles = BOARD_NUM_HOLES_6;
+        break;
+    case wamDisplay_moleCount_9:
+        numMoleHoles = BOARD_NUM_HOLES_9;
+        break;
+    }
+    wamDisplay_computeMoleInfo();
+};
+
+void wamDisplay_init(){// Call this before using any wamDisplay_ functions.
+    display_setTextColor(DISPLAY_WHITE, DISPLAY_BLACK);
+//    display_fillScreen(DISPLAY_BLACK);
+//    wamDisplay_resetAllScoresAndLevel();
+//    wamDisplay_computeMoleInfo();
+
+};
+
+void wamDisplay_drawMoleBoard(){// Draw the game display with a background and mole holes.
+    display_fillRect(BOARD_ORIGIN_X_Y, BOARD_ORIGIN_X_Y, BOARD_SIZE_X, BOARD_SIZE_Y, DISPLAY_GREEN);
+    wamDisplay_drawScoreScreen();
+    wamDisplay_drawAllMoleHoles();
+};
+
+void wamDisplay_drawSplashScreen(){ // Draw the initial splash (instruction) screen.
+    display_fillScreen(DISPLAY_BLACK);
+    display_setTextColor(DISPLAY_WHITE);
+
+    display_setTextSize(TEXT_SIZE_L);
+    display_setCursor(START_MSG_0_X , START_MSG_0_Y);
+    display_println(START_MSG_0);
+
+    display_setTextSize(TEXT_SIZE_S);
+    display_setCursor(START_MSG_1_X, START_MSG_1_Y);
+    display_println(START_MSG_1);
+};
+
+
+void wamDisplay_drawGameOverScreen(){ // Draw the game-over screen.
+    display_fillScreen(DISPLAY_BLACK);
+    display_setTextColor(DISPLAY_WHITE);
+
+    sprintf(endStatMsgStr1, GAME_OVER_MSG_1, statCount0);
+    sprintf(endStatMsgStr2, GAME_OVER_MSG_2, statCount1);
+    sprintf(endStatMsgStr3, GAME_OVER_MSG_3, statCount2);
+
+    display_setTextSize(TEXT_SIZE_L);
+    display_setCursor(GAME_OVER_MSG_0_X , GAME_OVER_MSG_0_Y);
+    display_println(GAME_OVER_MSG_0);
+
+    display_setTextSize(TEXT_SIZE_S);
+    display_setCursor(GAME_OVER_MSG_1_X , GAME_OVER_MSG_1_Y);
+    display_println(endStatMsgStr1); // String of the Hits
+
+    display_setCursor(GAME_OVER_MSG_2_X , GAME_OVER_MSG_2_Y);
+    display_println(endStatMsgStr2); // String of the Misses
+
+    display_setCursor(GAME_OVER_MSG_3_X , GAME_OVER_MSG_3_Y);
+    display_println(endStatMsgStr3); // String of the End Level
+
+    display_setCursor(GAME_OVER_MSG_4_X , GAME_OVER_MSG_4_Y);
+    display_println(GAME_OVER_MSG_4);
+}
+
+// Selects a random mole and activates it.
+// Activating a mole means that the ticksUntilAwake and ticksUntilDormant counts are initialized.
+// See the comments for wamDisplay_moleInfo_t for details.
+// Returns true if a mole was successfully activated. False otherwise. You can
+// use the return value for error checking as this function should always be successful
+// unless you have a bug somewhere.
+bool wamDisplay_activateRandomMole(){
+    uint8_t randMoleHole = rand()%(numMoleHoles); // get random Number for what region to activate
+    for (int i = 0; i < numMoleHoles; i++){
+        if (wamDisplay_moleInfo[i]->ticksUntilAwake == 0 &&
+            wamDisplay_moleInfo[i]->ticksUntilDormant == 0){ //if no mole is active
+            wamDisplay_moleInfo[randMoleHole]->ticksUntilAwake = wamControl_getRandomMoleAwakeInterval();// get how long the mole will be awake
+            wamDisplay_moleInfo[randMoleHole]->ticksUntilDormant = wamControl_getRandomMoleAsleepInterval(); // get how long the mole is asleep
+            activeMoleCount++;// increment mole count
+            return TRUE;
+        }
+    }
+        return FALSE;
+};
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//#define TOP_ROW_MIN_Y 10
+//#define TOP_ROW_MAX_Y 70
+//// the left most columns x range
+//#define LEFT_COLUMN_MIN_X 10
+//#define LEFT_COLUMN_MAX_X 70
+//// the middle column's x range
+//#define MIDDLE_COLUMN_MIN_X 130
+//#define MIDDLE_COLUMN_MAX_X 190
+//// the right most column's x range
+//#define RIGHT_COLUMN_MIN_X 250
+//#define RIGHT_COLUMN_MAX_X 310
+//// the middle row's y range
+//#define MIDDLE_ROW_MIN_Y 95
+//#define MIDDLE_ROW_MAX_Y 125
+//// the bottom row's y range
+//#define BOTTOM_ROW_MIN_Y 140
+//#define BOTTOM_ROW_MAX_Y 200
+//#define INVALID_INDEX_VALUE 66
+//// value for four hole board
+//#define FOUR_MOLE_BOARD 4
+//// value for six hole board
+//#define SIX_MOLE_BOARD 6
+//// value for nine hole board
+//#define NINE_MOLE_BOARD 9
+//#define MOLE_1_INDEX 0
+//#define MOLE_2_INDEX 1
+//#define MOLE_3_INDEX 2
+//#define MOLE_4_INDEX 3
+//#define MOLE_5_INDEX 4
+//#define MOLE_6_INDEX 5
+//#define MOLE_7_INDEX 6
+//#define MOLE_8_INDEX 7
+//#define MOLE_9_INDEX 8
+//
+//uint16_t decodeTouchData(uint16_t x, uint16_t y){
+//    // if the mole board is the 4 hole layout, then we only check
+//    // the corner holes (top-left, top-right, bottom-left, bottom-right)
+//    if (numMoleHoles == FOUR_MOLE_BOARD){
+//        // if the touch place was on the top row check the two top corner holes
+//        if (y > TOP_ROW_MIN_Y && y < TOP_ROW_MAX_Y){
+//            // check top left
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 1 was whacked!
+//                return MOLE_1_INDEX;
+//            }
+//            // check top right
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 2 was whacked!
+//                return MOLE_2_INDEX;
+//            }
+//        }
+//        // if the touch was on the bottom row
+//        else if (y > BOTTOM_ROW_MIN_Y && y < BOTTOM_ROW_MAX_Y){
+//            // check bottom left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 3 was whacked!
+//                return MOLE_3_INDEX;
+//            }
+//            // check bottom right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 4 was whacked!
+//                return MOLE_4_INDEX;
+//            }
+//        }
+//    }
+//
+//    // if the board is the six hole layout
+//    else if (numMoleHoles == SIX_MOLE_BOARD){
+//        // if the touch was the top row
+//        if (y > TOP_ROW_MIN_Y && y < TOP_ROW_MAX_Y){
+//            // check top left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 1 was whacked!
+//                return MOLE_1_INDEX;
+//            }
+//            // check top middle hole
+//            else if (x > MIDDLE_COLUMN_MIN_X && x < MIDDLE_COLUMN_MAX_X){
+//                // mole 2 was whacked!
+//                return MOLE_2_INDEX;
+//            }
+//            // check top right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 3 was whacked!
+//                return MOLE_3_INDEX;
+//            }
+//        }
+//        // if the touch was the bottom row
+//        else if (y > BOTTOM_ROW_MIN_Y && y < BOTTOM_ROW_MAX_Y){
+//            // check bottom left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 4 was whacked!
+//                return MOLE_4_INDEX;
+//            }
+//            // check bottom middle hole
+//            else if (x > MIDDLE_COLUMN_MIN_X && x < MIDDLE_COLUMN_MAX_X){
+//                // mole 5 was whacked!
+//                return MOLE_5_INDEX;
+//            }
+//            // check bottom right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 6 was whacked!
+//                return MOLE_6_INDEX;
+//            }
+//        }
+//    }
+//
+//    // if it's not the 4 or 6 board, it's the 9 board
+//    else {
+//        // if the touch was the top row
+//        if (y > TOP_ROW_MIN_Y && y < TOP_ROW_MAX_Y){
+//            // check top left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 1 was whacked!
+//                return MOLE_1_INDEX;
+//            }
+//            // check top middle hole
+//            else if (x > MIDDLE_COLUMN_MIN_X && x < MIDDLE_COLUMN_MAX_X){
+//                // mole 2 was whacked!
+//                return MOLE_2_INDEX;
+//            }
+//            // check top right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 3 was whacked!
+//                return MOLE_3_INDEX;
+//            }
+//        }
+//
+//        // if the touch was the middle row
+//        else if (y > MIDDLE_COLUMN_MIN_X && y < MIDDLE_COLUMN_MAX_X){
+//            // check middle left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 4 was whacked!
+//                return MOLE_4_INDEX;
+//            }
+//            // check middle middle hole
+//            else if (x > MIDDLE_COLUMN_MIN_X && x < MIDDLE_COLUMN_MAX_X){
+//                // mole 5 was whacked!
+//                return MOLE_5_INDEX;
+//            }
+//            // check middle right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 6 was whacked!
+//                return MOLE_6_INDEX;
+//            }
+//        }
+//
+//        // if the touch was the bottom row
+//        else if (y > BOTTOM_ROW_MIN_Y && y < BOTTOM_ROW_MAX_Y){
+//            // check bottom left hole
+//            if (x > LEFT_COLUMN_MIN_X && x < LEFT_COLUMN_MAX_X){
+//                // mole 7 was whacked!
+//                return MOLE_7_INDEX;
+//            }
+//            // check bottom middle hole
+//            else if (x > MIDDLE_COLUMN_MIN_X && x < MIDDLE_COLUMN_MAX_X){
+//                // mole 8 was whacked!
+//                return MOLE_8_INDEX;
+//            }
+//            // check bottom right hole
+//            else if (x > RIGHT_COLUMN_MIN_X && x < RIGHT_COLUMN_MAX_X){
+//                // mole 9 was whacked!
+//                return MOLE_9_INDEX;
+//            }
+//        }
+//    }
+//    // if the touch point was not a mole hole, return the invalid index value
+//    return MOLE_HOLE_FAIL;
+//}
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+// This takes the provided coordinates and attempts to whack a mole. If a
+// mole is successfully whacked, all internal data structures are updated and
+// the display and score is updated. You can only whack a mole if the mole is awake (visible).
+// The return value can be used during testing (you could just print which mole is
+// whacked without having to implement the entire game).
+wamDisplay_moleIndex_t wamDisplay_whackMole(wamDisplay_point_t* whackOrigin){
+//    uint16_t moleIndex = decodeTouchData(whackOrigin->x, whackOrigin->y);
+    uint16_t moleIndex = 0;
+    uint16_t x = whackOrigin->x;
+    uint16_t y = whackOrigin->y;
+    if (numMoleHoles == BOARD_NUM_HOLES_4){
+        if(x < LINE_0_X)
+            moleIndex += MOLE_HOLE_0_0;
+        if(y < LINE_0_Y)
+            moleIndex += MOLE_HOLE_0_0;
+        if(x > LINE_0_X && x < LINE_1_X)
+            moleIndex = MOLE_HOLE_FAIL;
+        if(y > LINE_0_Y && y < LINE_1_Y)
+            moleIndex = MOLE_HOLE_FAIL;
+        if(x > LINE_1_X)
+            moleIndex += MOLE_HOLE_2_0;
+        if(y > LINE_1_Y)
+            moleIndex += MOLE_HOLE_0_2;
+    }
+    else if (numMoleHoles == BOARD_NUM_HOLES_6){
+        if(x < LINE_0_X)
+            moleIndex += MOLE_HOLE_0_0;
+        if(y < LINE_0_Y)
+            moleIndex += MOLE_HOLE_0_0;
+        if(x > LINE_0_X && x < LINE_1_X)
+            moleIndex += MOLE_HOLE_1_0;
+        if(y > LINE_0_Y && y < LINE_1_Y)
+            moleIndex = MOLE_HOLE_FAIL;
+        if(x > LINE_1_X)
+            moleIndex += MOLE_HOLE_2_0;
+        if(y > LINE_1_Y)
+            moleIndex += MOLE_HOLE_0_2;
+    }
+    else if (numMoleHoles == BOARD_NUM_HOLES_9){
+        if(x < LINE_0_X)
+            moleIndex += MOLE_HOLE_0_0;
+        if(y < LINE_0_Y)
+            moleIndex += MOLE_HOLE_0_0;
+        if(x > LINE_0_X && x < LINE_1_X)
+            moleIndex += MOLE_HOLE_1_0;
+        if(y > LINE_0_Y && y < LINE_1_Y)
+            moleIndex += MOLE_HOLE_0_1;
+        if(x > LINE_1_X)
+            moleIndex += MOLE_HOLE_2_0;
+        if(y > LINE_1_Y)
+            moleIndex += MOLE_HOLE_0_2;
+    }
+    printf("moleIndex %d \n\r", moleIndex);
+    if (moleIndex >= MOLE_HOLE_FAIL){
+        return FAIL;
+    }
+    if (wamDisplay_moleInfo[moleIndex]->ticksUntilAwake == 0 &&
+            wamDisplay_moleInfo[moleIndex]->ticksUntilDormant != 0){ // if mole is awake and non-dormant
+
+        wamDisplay_moleInfo[moleIndex]->ticksUntilDormant = 0; // make the mole dormant
+        wamDisplay_drawMole(wamDisplay_moleInfo[moleIndex]->origin, FALSE); // erase the mole
+        wamDisplay_setHitScore(statCount0+1); // increment the number of hits
+        activeMoleCount--; // decrease num of moles active
+        wamDisplay_drawScoreScreen(); //update the board stats
+        return moleIndex; //return the mole index
+    }
+    return FAIL; // the hit failed
+};
+
+// This updates the ticksUntilAwake/ticksUntilDormant clocks for all of the moles.
+
+void wamDisplay_updateAllMoleTickCounts(){
+    for(int i = 0; i<numMoleHoles; i++){
+        if (wamDisplay_moleInfo[i]->ticksUntilAwake > 0){ // if it is not suppose to be awake then decrement it
+            wamDisplay_moleInfo[i]->ticksUntilAwake--; // decrement the tick
+            if (wamDisplay_moleInfo[i]->ticksUntilAwake == 0){ // when the timer hits 0 draw the mole
+                wamDisplay_drawMole(wamDisplay_moleInfo[i]->origin, TRUE); // draw the mole
+            }
+        }
+        else if (wamDisplay_moleInfo[i]->ticksUntilDormant > 0){ // now that the mole is awake, decrement down the dorment timer
+            wamDisplay_moleInfo[i]->ticksUntilDormant--; // decrement the dormant counter
+            if (wamDisplay_moleInfo[i]->ticksUntilDormant == 0){ // check for last second
+                wamDisplay_drawMole(wamDisplay_moleInfo[i]->origin, FALSE); //erase the mole
+                statCount1++; //missed the mole, increment the counter
+                wamDisplay_drawScoreScreen(); // update the score
+                activeMoleCount--;// decrement the number of active moles
+            }
+        }
+    }
+};
+
+// Returns the count of currently active moles.
+// A mole is active if it is not dormant, if:
+// ticksUntilAwake or ticksUntilDormant are non-zero (in the moleInfo_t struct).
+
+uint16_t wamDisplay_getActiveMoleCount(){
+    return activeMoleCount;
+};
+
+// Sets the hit value in the score window.
+void wamDisplay_setHitScore(uint16_t hits){
+    statCount0 = hits;
+};
+
+// Gets the current hit value.
+uint16_t wamDisplay_getHitScore(){
+    return statCount0;
+};
+
+// Sets the miss value in the score window.
+void wamDisplay_setMissScore(uint16_t misses){
+    statCount1 = misses;
+};
+
+// Gets the miss value.
+// Can be used for testing and other functions.
+uint16_t wamDisplay_getMissScore(){
+    return statCount1;
+};
+
+// Sets the level value on the score board.
+void wamDisplay_incrementLevel(){
+    statCount2++;
+};
+
+// Retrieves the current level value.
+// Can be used for testing and other functions.
+uint16_t wamDisplay_getLevel(){
+    return statCount2;
+};
+
+// Completely draws the score screen.
+// This function renders all fields, including the text fields for "Hits" and "Misses".
+// Usually only called once when you are initializing the game.
+void wamDisplay_drawScoreScreen(){
+    display_setTextSize(TEXT_SIZE_S);
+
+    sprintf(statStr0, BOARD_STAT_0, statCount0);
+    sprintf(statStr1, BOARD_STAT_1, statCount1);
+    sprintf(statStr2, BOARD_STAT_2, statCount2);
+    display_setCursor(BOARD_STAT_0_X, BOARD_STAT_0_Y);  // set cursor for hit msg
+    display_println(statStr0);                          // print hit msg
+    display_setCursor(BOARD_STAT_1_X, BOARD_STAT_0_Y);  // set cursor for miss msg
+    display_println(statStr1);                          // print miss msg
+    display_setCursor(BOARD_STAT_2_X, BOARD_STAT_0_Y);  // set cursor for level msg
+    display_println(statStr2);                          // print level msg
+};
+
+// Make this function available for testing purposes.
+void wamDisplay_incrementMissScore(){
+    statCount1++;
+};
+
+// Reset the scores and level to restart the game.
+void wamDisplay_resetAllScoresAndLevel(){
+    statCount0 = 0;
+    statCount1 = 0;
+    statCount2 = 0;
+    activeMoleCount = 0;
+
+    // deallocate all mole object memory
+    // deallocate the array
+    for (uint16_t l=0; l<numMoleHoles; l++) {
+        free(wamDisplay_moleInfo[l]);   // This deallocates the memory.
+        wamDisplay_moleInfo[l] = NULL;  // This step is not necessary but will keep you from reusing deallocated memory.
+    }
+    // Next, deallocate the array that contains the pointers to the mole objects.
+    free(wamDisplay_moleInfo);   // Deallocates the container of arrays.
+    wamDisplay_moleInfo = NULL;  // Also keeps you from reusing the deallocated memory.
+
+};
+
+// Test function that can be called from main() to demonstrate milestone 1.
+// Invoking this function should provide the same behavior as shown in the Milestone 1 video.
+void wamDisplay_runMilestone1_test(){
+    uint8_t splashFlag = 0;
+    uint8_t boardFlag = 0;
+    uint8_t doneFlag = 0;
+    uint8_t endFlag = 0;
+    wamDisplay_init();
+    while (1){
+        if (!splashFlag){
+            wamDisplay_drawSplashScreen();
+            splashFlag = 1;
+        }
+        if (display_isTouched()){
+            splashFlag = 0;
+            while (1){
+                wamDisplay_drawScoreScreen();
+                if (!boardFlag){
+                    wamDisplay_drawMoleBoard();
+                    boardFlag = 1;
+                }
+                if (display_isTouched()){
+                    boardFlag = 0;
+                    while (1){
+                        if (!doneFlag){
+                            wamDisplay_drawGameOverScreen();
+                            doneFlag = 1;
+                        }
+                        if (display_isTouched()){
+                            doneFlag = 0;
+                            endFlag = 1;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        if(endFlag){
+            break;
+        }
+    }
+};
+
+// Helper Function to Draw a Mole
+void wamDisplay_drawMole(wamDisplay_point_t moleReion, uint8_t drwMole){
+    if(drwMole){
+        display_fillCircle(moleReion.x, moleReion.y, MOLE_RADIUS, DISPLAY_RED);
+    }
+    else{
+        display_fillCircle(moleReion.x, moleReion.y, MOLE_RADIUS, DISPLAY_BLACK);
+    }
+}
+
+// Helper Function to Draw all the Mole Holes
+void wamDisplay_drawAllMoleHoles(){
+    if (numMoleHoles == 4){
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_2, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_2, TRUE);
+    }
+    else if(numMoleHoles == 6){
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_1_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_2, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_1_2, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_2, TRUE);
+    }
+    else if(numMoleHoles == 9){
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_1_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_0, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_1, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_1_1, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_1, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_0_2, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_1_2, TRUE);
+        wamDisplay_drawMoleHole(MOLE_HOLE_2_2, TRUE);
+    }
+};
+
+// Helper Function to one Mole Hole
+void wamDisplay_drawMoleHole(uint8_t moleHoleReion, uint8_t drwHole ){
+    if(drwHole){
+        switch (moleHoleReion){
+        case MOLE_HOLE_0_0:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_0_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_1_0:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_0_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_2_0:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_0_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_0_1:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_1_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_1_1:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_1_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_2_1:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_1_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_0_2:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_2_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_1_2:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_2_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        case MOLE_HOLE_2_2:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_2_Y, MOLE_RADIUS, DISPLAY_BLACK);
+            break;
+        }
+    }
+    else{
+        switch (moleHoleReion){
+        case MOLE_HOLE_0_0:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_0_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_1_0:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_0_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_2_0:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_0_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_0_1:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_1_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_1_1:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_1_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_2_1:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_1_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_0_2:
+            display_fillCircle(MOLE_HOLE_0_X, MOLE_HOLE_2_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_1_2:
+            display_fillCircle(MOLE_HOLE_1_X, MOLE_HOLE_2_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        case MOLE_HOLE_2_2:
+            display_fillCircle(MOLE_HOLE_2_X, MOLE_HOLE_2_Y, MOLE_HOLE_RADIUS, DISPLAY_RED);
+            break;
+        }
+    }
+};
+void wamDisplay_getMoleCoor(uint16_t index){
+    if( numMoleHoles == BOARD_NUM_HOLES_4){
+        switch (index){
+        case MOLE_HOLE_0_0:
+            moleCoord.x = MOLE_HOLE_0_X;
+            moleCoord.y = MOLE_HOLE_0_Y;
+            break;
+        case MOLE_HOLE_1_0:
+             moleCoord.x = MOLE_HOLE_2_X;
+             moleCoord.y = MOLE_HOLE_0_Y;
+             break;
+        case MOLE_HOLE_2_0:
+             moleCoord.x = MOLE_HOLE_0_X;
+             moleCoord.y = MOLE_HOLE_2_Y;
+             break;
+        case MOLE_HOLE_0_1:
+             moleCoord.x = MOLE_HOLE_2_X;
+             moleCoord.y = MOLE_HOLE_2_Y;
+             break;
+        }
+    }
+    else if( numMoleHoles == BOARD_NUM_HOLES_6){
+        switch (index){
+            case MOLE_HOLE_0_0:
+                moleCoord.x = MOLE_HOLE_0_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_1_0:
+                moleCoord.x = MOLE_HOLE_1_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_2_0:
+                moleCoord.x = MOLE_HOLE_2_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_0_1:
+                moleCoord.x = MOLE_HOLE_0_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+            case MOLE_HOLE_1_1:
+                moleCoord.x = MOLE_HOLE_1_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+            case MOLE_HOLE_2_1:
+                moleCoord.x = MOLE_HOLE_2_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+        }
+    }
+    else if( numMoleHoles == BOARD_NUM_HOLES_9){
+        switch (index){
+            case MOLE_HOLE_0_0:
+                moleCoord.x = MOLE_HOLE_0_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_1_0:
+                moleCoord.x = MOLE_HOLE_1_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_2_0:
+                moleCoord.x = MOLE_HOLE_2_X;
+                moleCoord.y = MOLE_HOLE_0_Y;
+                break;
+            case MOLE_HOLE_0_1:
+                moleCoord.x = MOLE_HOLE_0_X;
+                moleCoord.y = MOLE_HOLE_1_Y;
+                break;
+            case MOLE_HOLE_1_1:
+                moleCoord.x = MOLE_HOLE_1_X;
+                moleCoord.y = MOLE_HOLE_1_Y;
+                break;
+            case MOLE_HOLE_2_1:
+                moleCoord.x = MOLE_HOLE_2_X;
+                moleCoord.y = MOLE_HOLE_1_Y;
+                break;
+            case MOLE_HOLE_0_2:
+                moleCoord.x = MOLE_HOLE_0_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+            case MOLE_HOLE_1_2:
+                moleCoord.x = MOLE_HOLE_1_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+            case MOLE_HOLE_2_2:
+                moleCoord.x = MOLE_HOLE_2_X;
+                moleCoord.y = MOLE_HOLE_2_Y;
+                break;
+        }
+    }
+}
+

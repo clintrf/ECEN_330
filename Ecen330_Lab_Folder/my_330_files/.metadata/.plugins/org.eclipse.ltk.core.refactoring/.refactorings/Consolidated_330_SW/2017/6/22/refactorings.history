@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Consolidated_330_SW/src/Lab6_simon/buttonHandler&apos; to &apos;buttonHandler.h&apos;" description="Rename resource &apos;buttonHandler&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Lab6_simon/buttonHandler" name="buttonHandler.h" stamp="1496345682371" updateReferences="true"/>
+</session>

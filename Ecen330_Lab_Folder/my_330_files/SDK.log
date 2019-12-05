@@ -1,0 +1,1289 @@
+13:28:58 INFO  : Saving repository preferences.
+13:28:58 INFO  : Reading in cores from local repositories: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+13:28:58 INFO  : Cleaning BSP projects in the workspace.
+13:32:39 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:32:43 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:39:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:40:39 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+13:41:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:41:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:41:34 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:42:50 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:42:50 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:42:50 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:43:30 INFO  : ps7_init is completed.
+13:43:30 INFO  : ps7_post_config is completed.
+13:43:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:43:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:43:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:43:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:44:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:17:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:18:33 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+14:19:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:30:38 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:52:57 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+15:56:35 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:56:40 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:57:02 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:57:15 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+18:20:39 INFO  : ps7_init is completed.
+18:20:39 INFO  : ps7_post_config is completed.
+18:20:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:25:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:16:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:18:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:18:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:18:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:19:16 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+19:19:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:19:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:20:15 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:338)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:320)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+19:20:15 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:20:34 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+19:21:49 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+19:21:57 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+19:22:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:25:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:26:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:26:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:29:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:31:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:39:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:46:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:42:09 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+16:57:05 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+17:07:41 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:07:48 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:07:58 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+17:07:58 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:386)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:297)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:245)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+17:08:23 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+17:08:34 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+17:09:05 INFO  : ps7_init is completed.
+17:09:05 INFO  : ps7_post_config is completed.
+17:09:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:09:06 ERROR : No such port: COM12
+17:10:13 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:13 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:13 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:13 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:13 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:26 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:10:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:11:12 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:12:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:15:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:19:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:22:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:27:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:29:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:39:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:41:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:54:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:58:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:04:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:09:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:11:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:12:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:15:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:19:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:30:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:52:04 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:196)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:154)
+	at java.io.BufferedReader.read(BufferedReader.java:175)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:724)
+18:52:04 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+12:38:47 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+15:26:05 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:26:11 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:26:44 INFO  : ps7_init is completed.
+15:26:44 INFO  : ps7_post_config is completed.
+15:26:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:26:45 ERROR : No such port: COM11
+15:27:13 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:36:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:06 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:19 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:20 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:20 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:20 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:36:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:37:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:22 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:08:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:13:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:17:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:38:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:19:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:31:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:36:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:43:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:52:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:55:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:03:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:26:19 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:48:46 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+16:02:12 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+16:02:22 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+16:02:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:02:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:03:11 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:03:11 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:03:11 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:03:47 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+16:03:47 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:386)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:297)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:245)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+16:04:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:04:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:04:54 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:04:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:04:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:04:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:07 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+16:05:09 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:09 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:09 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:39 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:39 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:39 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:49 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:06:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:06:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:06:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:07:22 INFO  : ps7_init is completed.
+16:07:22 INFO  : ps7_post_config is completed.
+16:07:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:08:29 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:08:29 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:08:29 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:13:30 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:01 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:29:01 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:49:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:49:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:49:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+20:19:06 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:20:18 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+13:39:38 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+14:59:02 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+15:21:57 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:22:08 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:22:33 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:43:42 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:42 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:42 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:42 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:43:42 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:07 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:44:34 INFO  : ps7_init is completed.
+15:44:34 INFO  : ps7_post_config is completed.
+15:44:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:45:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:11:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:16:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:17:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:18:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:20:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:22:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:24:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:25:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:33:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:38:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:42:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:43:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:44:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:48:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:50:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:53:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:55:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:59:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:01:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:02:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:17:40 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:32:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:38:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:55:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:59:32 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:45:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:46:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:48:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:14:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:32:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:34:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:11:20 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:11:51 INFO  : ps7_init is completed.
+21:11:51 INFO  : ps7_post_config is completed.
+21:11:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:13:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:17:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:25:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:28:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:29:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:29:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:47:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:48:31 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:48:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:04:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:06:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:07:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:07:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:07:56 ERROR : Port COM16 is already in use.
+22:38:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:44:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:44:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:19:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:21:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:25:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:36:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:51:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:52:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:54:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:14:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:16:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:28:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:39:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:42:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:46:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:54:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:57:06 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+01:57:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:04:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+02:04:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:04:44 ERROR : Port COM16 is already in use.
+02:06:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:13:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:16:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:19:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:26:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:28:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:33:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:41:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+08:41:50 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+08:41:57 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+08:41:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:41:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:41:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:41:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:41:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:15 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:15 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:15 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:17 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:28 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:41 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:41 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:43:41 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+08:44:19 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+08:45:12 INFO  : ps7_init is completed.
+08:45:12 INFO  : ps7_post_config is completed.
+08:45:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:47:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:49:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:51:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:54:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:57:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:04:48 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+13:25:51 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:25:58 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:25:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:25:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:25:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:25:59 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:25:59 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:25:59 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:36 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:56:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:08 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+13:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:04:51 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:46:56 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:47:31 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+14:49:47 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+14:50:48 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+14:54:01 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:477)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+14:56:21 INFO  : ps7_init is completed.
+14:56:21 INFO  : ps7_post_config is completed.
+14:56:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:01:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:58:23 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:08:41 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+17:47:50 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+17:49:05 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:49:22 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:50:32 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+17:50:47 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:50:47 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:50:56 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:50:56 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:50:56 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+17:51:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:06:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:07:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:09:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:15:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:23:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:26:35 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+20:15:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:17:27 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:17:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:19:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:30:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:35:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:42:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:44:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:46:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:47:40 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+20:47:40 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:45:53 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+15:50:20 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:50:38 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:50:38 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:01 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:43:37 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:44:00 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+18:45:15 INFO  : ps7_init is completed.
+18:45:15 INFO  : ps7_post_config is completed.
+18:45:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:51:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:56:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:56:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:03:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:03:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:11:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:11:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:13:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:13:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:14:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:14:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:18:46 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+19:30:58 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:31:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:33:00 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:33:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:17:49 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:54:30 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+12:56:58 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+12:57:20 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+12:57:21 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+15:55:38 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:27 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:00:58 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:05:21 INFO  : ps7_init is completed.
+16:05:21 INFO  : ps7_post_config is completed.
+16:05:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:11:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:11:48 WARN  :  [Hsm 55-1559] Software Design already exists with Name C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW_bsp\system.mss
+16:15:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:27:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:31:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:35:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:38:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:40:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:55:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:01:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:04:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:09:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:18:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:23:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:30:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:39:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:48:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:51:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:57:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:01:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:04:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:10:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:15:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:20:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:23:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:28:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:30:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:35:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:41:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:47:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:00:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:00:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:07:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:07:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:08:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:10:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:11:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:12:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:18:07 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:338)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:320)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+19:18:07 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:50:13 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+23:18:37 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+23:19:00 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+23:19:49 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+23:21:33 INFO  : ps7_init is completed.
+23:21:33 INFO  : ps7_post_config is completed.
+23:21:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:33:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:33:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:35:31 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:35:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:41:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:42:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:56:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:07:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:09:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:10:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:29:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:29:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:45:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:58:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:29:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:48:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:54:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:59:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:06:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:13:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:19:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:22:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:28:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:30:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:38:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:40:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:44:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:48:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:53:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:24:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:29:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:33:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:41:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:48:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:51:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:09:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:16:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:38:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:49:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:56:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:59:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:05:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:22:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:32:00 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+07:56:59 INFO  : ps7_init is completed.
+07:56:59 INFO  : ps7_post_config is completed.
+07:56:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:05:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:06:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+08:09:17 ERROR : Unexpected error while launching program.
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(TM.java:895)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:493)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+08:09:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:12:34 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:338)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:320)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+08:12:34 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:28:23 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+17:05:58 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:06:16 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:07:03 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+17:08:09 INFO  : ps7_init is completed.
+17:08:09 INFO  : ps7_post_config is completed.
+17:08:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:28 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:59:33 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+21:02:31 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+21:02:51 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+21:03:30 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:21:50 INFO  : ps7_init is completed.
+21:21:50 INFO  : ps7_post_config is completed.
+21:21:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:32:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:11:37 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+15:32:21 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:32:52 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+15:33:37 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:36:33 INFO  : ps7_init is completed.
+15:36:33 INFO  : ps7_post_config is completed.
+15:36:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:37:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:37:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:39:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:39:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:44:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:44:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:51:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:51:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:01:06 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:01:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:03:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:03:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:05:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:05:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:13:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:13:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:16:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:20:11 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:20:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:22:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:22:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:24:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:25:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:27:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:27:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:29:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:29:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:30:37 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:30:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:30:41 ERROR : Port COM12 is already in use.
+16:32:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:32:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:34:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:34:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:53:27 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:53:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:28:11 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:196)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:154)
+	at java.io.BufferedReader.read(BufferedReader.java:175)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:724)
+17:28:11 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+17:32:00 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+17:39:31 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:39:51 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+17:41:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:07:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:07:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:07:52 ERROR : Port COM12 is already in use.
+19:16:07 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:338)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:320)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+19:16:07 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:16:31 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+19:31:15 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+19:31:39 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+19:32:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:43:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:43:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:47:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:47:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:51:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:52:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:52:02 ERROR : Port COM12 is already in use.
+19:53:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:53:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:06:29 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:06:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:07:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:07:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:09:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:09:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:11:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:11:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:23:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:23:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:23:18 ERROR : Port COM12 is already in use.
+20:34:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:35:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:43:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:43:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:51:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:51:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:53:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:54:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:55:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:55:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:03:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:03:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:06:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:06:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:06:30 ERROR : Port COM12 is already in use.
+21:08:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:08:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:08:12 ERROR : Port COM12 is already in use.
+21:09:43 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:10:31 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:10:46 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Unable to Stop Processor. System could be in unknown state.
+                     Please reset the system
+Unknown Error Occured
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(TM.java:850)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(CPURunSession.java:27)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(TM.java:897)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:493)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+21:11:41 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:12:30 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:14:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:14:33 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+21:14:52 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+21:15:16 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+21:16:08 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+21:16:50 INFO  : ps7_init is completed.
+21:16:50 INFO  : ps7_post_config is completed.
+21:16:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:18:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:18:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:21:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:21:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:41:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:41:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:49:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:49:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:51:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:51:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:55:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:55:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:19:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:19:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:20:03 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1153)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:431)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:513)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+22:20:27 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+22:20:57 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+22:22:30 INFO  : ps7_init is completed.
+22:22:30 INFO  : ps7_post_config is completed.
+22:22:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:34:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:34:51 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1153)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:431)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:513)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+22:35:12 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+22:35:53 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+22:36:29 INFO  : ps7_init is completed.
+22:36:29 INFO  : ps7_post_config is completed.
+22:36:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:43:12 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+22:45:17 INFO  : ps7_init is completed.
+22:45:17 INFO  : ps7_post_config is completed.
+22:45:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:45:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:46:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:52:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:52:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:53:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:53:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:55:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:55:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:56:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:56:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:59:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:00:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:01:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:01:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:08:37 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:08:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:11:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:11:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:44 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:13:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:15:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:15:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:18:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:18:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:22:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:22:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:23:17 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+23:25:25 INFO  : ps7_init is completed.
+23:25:25 INFO  : ps7_post_config is completed.
+23:25:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:25:27 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+23:26:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:26:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:27:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:27:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:27:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:28:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:40:49 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:40:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:42:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:42:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:45:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:45:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:51:55 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:52:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:53:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:53:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:55:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:55:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:01:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:01:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:08:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:08:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:10:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:10:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:10:39 ERROR : Port COM12 is already in use.
+00:21:16 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+00:21:16 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:42:01 INFO  : Restoring local repository preferences: 
+		 F:\Ecen330_Lab_Folder\ip_repository
+13:49:35 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:49:57 WARN  :  [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/Digilent/axi_dispctrl_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/Digilent/axi_dispctrl_1.0 do not exist or not accessible
+ [Hsm 55-1607] Software Repository Paths c:/Users/hutch/ZYBO/digilent_demoUARTBluetooth/source/vivado/hw/lib/ADI/axi_i2s_adi_1.0 and F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/../../../../../../lib/ADI/axi_i2s_adi_1.0 do not exist or not accessible
+13:51:08 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+13:58:22 INFO  : ps7_init is completed.
+13:58:22 INFO  : ps7_post_config is completed.
+13:58:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:18:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:18:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:18:50 ERROR : Port COM14 is already in use.
+14:22:58 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:23:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:27:11 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:27:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:31:45 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:31:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:37:13 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:37:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:38:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:38:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:51:55 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:53:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:53:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:58:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:58:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:03:37 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:03:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:09:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:09:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:09:26 ERROR : Port COM14 is already in use.
+15:11:01 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:11:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:11:43 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1153)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:431)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:513)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+15:11:56 INFO  : FPGA configured successfully with bitstream "F:/Ecen330_Lab_Folder/my_330_files/EE330_hw_platform_0/system_wrapper.bit"
+15:12:36 INFO  : ps7_init is completed.
+15:12:36 INFO  : ps7_post_config is completed.
+15:12:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:22:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:22:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:24:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:24:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:30:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:30:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:34:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:34:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:48:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:48:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:18:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:18:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:19:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:20:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:13:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:13:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:14:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:15:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:20:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:20:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:41:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:42:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:09:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:10:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:13:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:13:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:21:54 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:338)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:320)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+19:21:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\zynq_fsbl\Debug\zynq_fsbl.elf
+	C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\EE330_hw_platform_0\system_wrapper.bit
+	C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_EE390_Winter2016_Final_SW\Consolidated_330_SW\Debug\Consolidated_330_SW.elf
+}

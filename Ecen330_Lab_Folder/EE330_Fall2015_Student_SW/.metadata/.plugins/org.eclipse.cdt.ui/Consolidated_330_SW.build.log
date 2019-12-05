@@ -1,0 +1,111 @@
+17:34:19 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+'Building file: ../supportFiles/Adafruit_GFX.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/Adafruit_GFX.d" -MT"supportFiles/Adafruit_GFX.d" -o "supportFiles/Adafruit_GFX.o" "../supportFiles/Adafruit_GFX.cpp"
+'Finished building: ../supportFiles/Adafruit_GFX.cpp'
+' '
+'Building file: ../supportFiles/Adafruit_STMPE610.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/Adafruit_STMPE610.d" -MT"supportFiles/Adafruit_STMPE610.d" -o "supportFiles/Adafruit_STMPE610.o" "../supportFiles/Adafruit_STMPE610.cpp"
+'Finished building: ../supportFiles/Adafruit_STMPE610.cpp'
+' '
+'Building file: ../supportFiles/Adafruit_TFTLCD.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/Adafruit_TFTLCD.d" -MT"supportFiles/Adafruit_TFTLCD.d" -o "supportFiles/Adafruit_TFTLCD.o" "../supportFiles/Adafruit_TFTLCD.cpp"
+'Finished building: ../supportFiles/Adafruit_TFTLCD.cpp'
+' '
+'Building file: ../supportFiles/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/Print.d" -MT"supportFiles/Print.d" -o "supportFiles/Print.o" "../supportFiles/Print.cpp"
+'Finished building: ../supportFiles/Print.cpp'
+' '
+'Building file: ../supportFiles/WString.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/WString.d" -MT"supportFiles/WString.d" -o "supportFiles/WString.o" "../supportFiles/WString.cpp"
+'Finished building: ../supportFiles/WString.cpp'
+' '
+'Building file: ../supportFiles/bluetooth.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/bluetooth.d" -MT"supportFiles/bluetooth.d" -o "supportFiles/bluetooth.o" "../supportFiles/bluetooth.c"
+'Finished building: ../supportFiles/bluetooth.c'
+' '
+'Building file: ../supportFiles/circularBuffer.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/circularBuffer.d" -MT"supportFiles/circularBuffer.d" -o "supportFiles/circularBuffer.o" "../supportFiles/circularBuffer.c"
+'Finished building: ../supportFiles/circularBuffer.c'
+' '
+'Building file: ../supportFiles/display.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/display.d" -MT"supportFiles/display.d" -o "supportFiles/display.o" "../supportFiles/display.cpp"
+'Finished building: ../supportFiles/display.cpp'
+' '
+'Building file: ../supportFiles/glcdfont.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/glcdfont.d" -MT"supportFiles/glcdfont.d" -o "supportFiles/glcdfont.o" "../supportFiles/glcdfont.c"
+'Finished building: ../supportFiles/glcdfont.c'
+' '
+'Building file: ../supportFiles/globalTimer.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/globalTimer.d" -MT"supportFiles/globalTimer.d" -o "supportFiles/globalTimer.o" "../supportFiles/globalTimer.c"
+'Finished building: ../supportFiles/globalTimer.c'
+' '
+'Building file: ../supportFiles/interrupts.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/interrupts.d" -MT"supportFiles/interrupts.d" -o "supportFiles/interrupts.o" "../supportFiles/interrupts.c"
+'Finished building: ../supportFiles/interrupts.c'
+' '
+'Building file: ../supportFiles/lcd.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/lcd.d" -MT"supportFiles/lcd.d" -o "supportFiles/lcd.o" "../supportFiles/lcd.c"
+'Finished building: ../supportFiles/lcd.c'
+' '
+'Building file: ../supportFiles/leds.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/leds.d" -MT"supportFiles/leds.d" -o "supportFiles/leds.o" "../supportFiles/leds.c"
+'Finished building: ../supportFiles/leds.c'
+' '
+'Building file: ../supportFiles/mio.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/mio.d" -MT"supportFiles/mio.d" -o "supportFiles/mio.o" "../supportFiles/mio.c"
+'Finished building: ../supportFiles/mio.c'
+' '
+'Building file: ../supportFiles/new.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/new.d" -MT"supportFiles/new.d" -o "supportFiles/new.o" "../supportFiles/new.cpp"
+'Finished building: ../supportFiles/new.cpp'
+' '
+'Building file: ../supportFiles/spi.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/spi.d" -MT"supportFiles/spi.d" -o "supportFiles/spi.o" "../supportFiles/spi.c"
+'Finished building: ../supportFiles/spi.c'
+' '
+'Building file: ../supportFiles/tftGpio.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/tftGpio.d" -MT"supportFiles/tftGpio.d" -o "supportFiles/tftGpio.o" "../supportFiles/tftGpio.c"
+'Finished building: ../supportFiles/tftGpio.c'
+' '
+'Building file: ../supportFiles/utils.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"supportFiles/utils.d" -MT"supportFiles/utils.d" -o "supportFiles/utils.o" "../supportFiles/utils.cpp"
+'Finished building: ../supportFiles/utils.cpp'
+' '
+'Building file: ../src/helloWorld/main.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I"C:\Users\hutch\ZYBO\EE330_Fall2015_EE390_Winter2016\EE330_Fall2015_Student_SW\Consolidated_330_SW" -c -fmessage-length=0 -I../../Consolidated_330_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloWorld/main.d" -MT"src/helloWorld/main.d" -o "src/helloWorld/main.o" "../src/helloWorld/main.c"
+'Finished building: ../src/helloWorld/main.c'
+' '
+'Building target: Consolidated_330_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Consolidated_330_SW_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/bluetooth.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/tftGpio.o ./supportFiles/utils.o  ./src/helloWorld/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Consolidated_330_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 199276	   3184	3010216	3212676	 310584	Consolidated_330_SW.elf
+'Finished building: Consolidated_330_SW.elf.size'
+' '
+
+17:34:25 Build Finished (took 6s.163ms)
+

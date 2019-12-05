@@ -1,0 +1,18 @@
+!SESSION 2015-08-19 10:30:59.824 -----------------------------------------------
+eclipse.buildId=2014.2
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-19 10:41:00.098
+!MESSAGE Indexed 'Consolidated_330_SW' (25 sources, 140 headers) in 5.01 sec: 5,047 declarations; 10,251 references; 0 unresolved inclusions; 15 syntax errors; 361 unresolved names (2.31%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-19 10:41:10.658
+!MESSAGE Indexed 'zynq_fsbl' (12 sources, 57 headers) in 1.47 sec: 1,594 declarations; 7,141 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-19 10:41:14.075
+!MESSAGE Indexed 'Consolidated_330_SW_bsp' (162 sources, 188 headers) in 3.39 sec: 8,264 declarations; 37,572 references; 81 unresolved inclusions; 21 syntax errors; 225 unresolved names (0.49%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-19 10:41:16.305
+!MESSAGE Indexed 'zynq_fsbl_bsp' (164 sources, 198 headers) in 2.20 sec: 8,696 declarations; 37,975 references; 81 unresolved inclusions; 21 syntax errors; 225 unresolved names (0.48%)

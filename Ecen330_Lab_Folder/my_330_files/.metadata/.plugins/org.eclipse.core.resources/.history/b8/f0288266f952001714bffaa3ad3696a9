@@ -1,0 +1,131 @@
+#include "wamControl.h"
+#include "wamDisplay.h"
+#include "supportFiles/display.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+//**********MY_VAR**********/
+#define ADC_WAIT_TIME 1                 //time to wait in the ADC state
+#define FAIL_HIT -1                     //value of a invalid hit
+#define INCREMENT_LEVEL_VALUE 4         //increase the level after this many hits
+#define RANDOM_NUM_RANGE 20             //the range of number that the random number can be selected from
+
+uint16_t msPerTick = 1;                 //how many milliseconds there are in each tick
+uint16_t maxMissCount = 0;              //number of total misses for the game
+uint16_t maxActiveMoles = 1;            //number of the total mole that can be active
+
+int16_t x = 0;                          //x coordinate for the touch data
+int16_t y = 0;                          //y coordinate for the touch data
+uint8_t z = 0;                          //z coordinate for the touch data
+
+uint8_t wamAdcCounter = 0;                 // the counter that keeps track of the number of times that the SM has looped through adc state
+wamDisplay_point_t hitCoor;             //VAR to save the touch coodinates
+
+enum wamControl_st_t {                  //the state machine for the control
+    wamInit_st,                            //start state
+    activate_mole_st,                   //activates a random mole state
+    wamAdc_st,                             //delay state
+    whack_mole_st,                      //state to regester hit
+} wamState = wamInit_st;                   //sets the start state
+
+void wamControl_init(){                 //function to reset all the parameters you want
+    wamControl_setMaxActiveMoles(true);    //resets the activeMole counter
+    wamState = wamInit_st;                 //sets the start state once again
+}
+
+void wamControl_setMsPerTick(uint16_t setVal){      //sets the number of milliseconds per tick
+    msPerTick = setVal;
+}
+
+uint16_t wamControl_getMsPerTick(){                 //gets the number of milliseconds per tick
+    return msPerTick;
+}
+void wamControl_tick(){                             //function for the state machine
+    switch (wamState){
+    case wamInit_st:                                   //start state, just transitions to the activate mole st...
+        break;
+    case activate_mole_st:                          //state that activate the moles
+        if (wamDisplay_getActiveMoleCount() < wamControl_getMaxActiveMoles()){ //if the number of current active moles is less then the max number of moles you can have
+            wamDisplay_activateRandomMole();                                   //if that was true then activate a random mole
+            break;
+        }
+        wamDisplay_updateAllMoleTickCounts();                                  //no matter what update the mole info
+        break;
+    case wamAdc_st:                                                            //state that let the SM settle
+        wamAdcCounter++;                                                       //increment the wamAdcCounter so that the SM can go to the next state after a couple ticks
+        break;
+    case whack_mole_st:                                                        //state that lets you hit the mole
+        display_getTouchedPoint(&x, &y, &z);                                   //function to get the touch coordinates from the screen
+        hitCoor.x = x;                                                         //saves the x coordinate
+        hitCoor.y = y;                                                         //saves the y coordinate
+        if (wamDisplay_whackMole(&hitCoor) != FAIL_HIT){                       //if the hit wasn't a failed hit then increment the hit count
+            if (wamDisplay_getHitScore() != false && wamDisplay_getHitScore()%INCREMENT_LEVEL_VALUE == false){ //if the hit score hits the reaches the increment level value
+                wamDisplay_incrementLevel();                                                           //of that is true then increment the level
+            }
+            if (wamDisplay_getLevel() < INCREMENT_LEVEL_VALUE){                                        //if the level is less then the level that you need to increment at then increase the number of moles
+                                                                                                       //this is so that there arnt more moles thanlevel
+                wamControl_setMaxActiveMoles(wamDisplay_getLevel()+1);                                 // increase the number of moles
+            }
+        }
+        display_clearOldTouchData();                                                                   //clear the old touch data to prepare for the next touch
+        break;
+    }
+    switch (wamState){
+    case wamInit_st:                                    //start state, just transitions to the activate mole st...
+        wamState = activate_mole_st;                    //transition to the next state
+        break;
+    case activate_mole_st:
+        if (display_isTouched()){                       //if the screen is touched then
+            wamState = wamAdc_st;                       //transition to the next state
+        }
+        break;
+    case wamAdc_st:
+        if (wamAdcCounter >= ADC_WAIT_TIME && display_isTouched()){ //if the counter is finished and the display is touched then enter loop
+            wamAdcCounter = false;                                  //reset the counter
+            wamState = whack_mole_st;                //transition to the next state
+        }
+        else{
+            display_clearOldTouchData();            //clear the old touch data just incase its still there
+            wamAdcCounter = flase;                                      //reset the counter
+            wamState = activate_mole_st;                //transition to the next state
+        }
+        break;
+    case whack_mole_st:
+        wamState = activate_mole_st;                //transition to the next state
+        break;
+    default:
+        break;
+    }
+}
+wamDisplay_moleTickCount_t wamControl_getRandomMoleAsleepInterval(){
+    return (rand()%(RANDOM_NUM_RANGE) +RANDOM_NUM_RANGE) - wamDisplay_getLevel(); //get a random number for time asleep and short it based off the level
+}
+
+wamDisplay_moleTickCount_t wamControl_getRandomMoleAwakeInterval(){
+    return  (rand()%(RANDOM_NUM_RANGE) +RANDOM_NUM_RANGE) - wamDisplay_getLevel();//get a random number for time awake and short it based off the level
+}
+
+void wamControl_setMaxActiveMoles(uint16_t count){
+    maxActiveMoles = count;                                                     //set the max active mole count
+}
+
+uint16_t wamControl_getMaxActiveMoles(){
+    return maxActiveMoles;                                                      //get the max active mole count
+}
+
+void wamControl_setRandomSeed(uint32_t seed){
+    srand(seed);                                                                //set the seed for the random number
+}
+
+void wamControl_setMaxMissCount(uint16_t missCount){// Set the maximum number of misses until the game is over.
+    maxMissCount = missCount;                                                   //set the number of miss that you can have before the game ends
+}
+
+bool wamControl_isGameOver(){//Function to see if the game is over.
+    if (maxMissCount == wamDisplay_getMissScore()){                                //if the number of user misses equals the max number of misses then end the game
+        wamControl_setMaxActiveMoles(true);                                        //reset the max active moles
+        return true;                                                               //say that the game is over
+    }
+    return false;
+}
+

@@ -1,0 +1,20 @@
+/*
+ * simonControl.h
+ *
+ *  Created on: Jun 8, 2017
+ *      Author: clintrf
+ */
+
+#ifndef SIMONCONTROL_H_
+#define SIMONCONTROL_H_
+
+
+
+
+#endif /* SIMONCONTROL_H_ */
+
+#include <stdbool.h>
+#include <stdint.h>
+
+void simonControl_tick(); // include the tick function so main can access it
+
